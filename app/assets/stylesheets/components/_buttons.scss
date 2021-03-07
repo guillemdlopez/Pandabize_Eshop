@@ -1,0 +1,26 @@
+.btn-customized {
+  border: none;
+  background: none;
+  color: grey;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: black;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+#btn-to-form,
+#btn-form {
+  margin-bottom: 0px !important;
+}
+
+.btn-wheel-size {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: none;
+  padding: 10px 14px;
+  border-radius: 4px;
+}

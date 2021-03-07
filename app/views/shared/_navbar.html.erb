@@ -1,0 +1,10 @@
+<div class="navbar">
+    <div class="my-container">
+        <%= link_to root_path do %>
+            <h3 class="mb-0 store-name">Pandabize</h3>
+        <% end %>
+        <% if current_user && current_user.avatar.attached? %>
+           <%= cl_image_tag current_user.avatar.key, class: 'avatar-small' %>
+        <% end %>
+    </div>
+</div>

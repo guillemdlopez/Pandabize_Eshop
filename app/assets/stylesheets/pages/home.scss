@@ -1,0 +1,30 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.spinner-div {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .dropdown {
+    right: 50px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 765px) {
+  .dropdown {
+    right: 50px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
