@@ -36,7 +36,7 @@ const BicycleShow = () => {
   );
 
   return (
-    <div className="bicycle-show my-container mt-5">
+    <div className="bicycle-show container mt-5">
       <div className="row align-items-center">
         <div className="col-md-7">
           <img src={bicycle?.photo} className="bicycle-photo" />

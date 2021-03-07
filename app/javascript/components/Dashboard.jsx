@@ -21,7 +21,7 @@ const Dashboard = () => {
   console.log(currentUser);
 
   return (
-    <div className="my-container">
+    <div className="container">
       <div className="row mt-5">
         <div className="col-md-4">
           <Sidebar {...currentUser} orders={userInfo.orders} />

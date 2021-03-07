@@ -134,7 +134,7 @@ const BicycleForm = () => {
   };
 
   return (
-    <div className="my-container">
+    <div className="container">
       <div className="row align-items-center mt-5">
         <div className="col-md-7">
           <div className="d-flex align-items-center mb-4">

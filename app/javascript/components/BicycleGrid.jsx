@@ -11,14 +11,14 @@ const BicycleGrid = () => {
   return (
     <>
       <div className="banner">
-        <div className="my-container">
+        <div className="container">
           <h1 className="banner-greeting">
             Welcome back, <strong> {user}</strong>
           </h1>
         </div>
       </div>
 
-      <div className="my-container">
+      <div className="container">
         <div className="cards mb-5 mt-4">
           {loading ? (
             <img src={icon} className="spinner" />
