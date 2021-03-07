@@ -6,14 +6,10 @@ class CustomizationPolicy < ApplicationPolicy
   end
 
   def show?
-    return true
+    true
   end
 
   def create?
     user.admin?
   end
-
-  # def new?
-  #   create?
-  # end
 end

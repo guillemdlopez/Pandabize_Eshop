@@ -108,6 +108,8 @@ const BicycleForm = () => {
         customs.splice(ind, 1);
       }
 
+      const roundedPrice = price.toFixed(2);
+
       fetch(`${API_ORDERS_URL}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -115,7 +117,7 @@ const BicycleForm = () => {
           order: {
             bicycle_id: +bicycleId,
             user_id: userId,
-            amount: price,
+            amount: roundedPrice,
             customization_ids: customs,
           },
         }),
@@ -203,7 +205,7 @@ const BicycleForm = () => {
               </li>
               <li className="mt-4">
                 <strong className="text-muted">TOTAL:</strong>
-                <span className="price-tag"> {price} €</span>
+                <span className="price-tag"> {price.toFixed(2)} €</span>
               </li>
             </ul>
             <button

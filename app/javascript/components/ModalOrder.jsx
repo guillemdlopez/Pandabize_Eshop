@@ -41,7 +41,7 @@ const ModalOrder = ({
             </li>
             <li className="mb-0">
               <strong>Price:</strong>{" "}
-              <span className="price-tag">{price} €</span>
+              <span className="price-tag">{price.toFixed(2)} €</span>
             </li>
           </ul>
         </div>

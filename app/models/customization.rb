@@ -15,10 +15,15 @@ class Customization < ApplicationRecord
   validates :price, numericality: { greater_than: 0 }
 
   before_save :capitalize_customization, unless: :customization_already_exists?
+  before_save :round_price
 
   def capitalize_customization
     self.name.capitalize!
     self.value.capitalize!
+  end
+
+  def round_price
+    self.price.round(2)
   end
 
   def associations

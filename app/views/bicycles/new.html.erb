@@ -1,0 +1,25 @@
+
+<div class="row justify-content-center">
+    <div class="col-md-6 shadow py-5 px-5 mt-4">
+        <h2 class="mb-4">Add a Bicycle</h2>
+        <div class="new-bicycle-form">
+            <%= simple_form_for(@bicycle) do |f|%>
+                <div class="form-group w-100">
+                    <%= f.label :name %>
+                    <%= f.input :name, label: false, class: 'w-100', placeholder: 'Wheel size'  %>
+                </div>
+
+                <div class="form-group">
+                    <%= f.label :description %>
+                    <%= f.input :description, label: false, placeholder: 'Id Lorem ad enim sunt aute ad proident.'  %>
+                </div>
+
+                <div class="form-group">
+                    <%= f.label :photo %>
+                    <%= f.input :photo, as: :file, label: false  %>
+                </div>
+                <%= f.submit 'Add', class: 'btn btn-primary w-100' %>
+            <% end %>
+        </div>
+    </div>
+</div>
