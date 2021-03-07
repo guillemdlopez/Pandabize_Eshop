@@ -30,7 +30,7 @@ const BicycleForm = () => {
   // retrieving available Customizations from the API
   const [availableCustomizations, setAvailableCustomizations] = useState([]);
 
-  const [formValues, handleInputChange] = useForm({
+  const [formValues, handleInputChange, reset] = useForm({
     wheelSize: "",
     rimColor: "",
     saddleColor: "",
@@ -135,13 +135,13 @@ const BicycleForm = () => {
 
   return (
     <div className="container">
-      <div className="row align-items-center mt-5">
+      <div className="row align-items-start mt-5 mb-5">
         <div className="col-md-7">
           <div className="d-flex align-items-center mb-4">
             <img src={photo} className="bicycle-photo" />
           </div>
         </div>
-        <div className="col-md-5">
+        <div className="col-md-5 order-form">
           <h2 className="mb-0">{name}</h2>
           {displayError ? (
             <div className="customized-error animate__animated animate__fadeIn">

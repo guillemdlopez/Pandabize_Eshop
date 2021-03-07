@@ -24,6 +24,29 @@ body {
   font-size: 14px;
 }
 
+.btn-success,
+.btn-primary {
+  border: 1px solid $main-black;
+  background: $main-black;
+
+  &:hover {
+    background: $main-black;
+    color: white;
+    border: 1px solid $main-black;
+  }
+}
+
+.btn-outline-success {
+  color: $main-black;
+  border: 1px solid $main-black;
+
+  &:hover {
+    background-color: $main-black;
+    color: white;
+    border: 1px solid $main-black;
+  }
+}
+
 .inline-list {
   padding-left: 0px;
 
