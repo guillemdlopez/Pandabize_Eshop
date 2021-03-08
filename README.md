@@ -4,6 +4,8 @@
 
 Content:
 
+- [BASE URL](#BASE-URL)
+- [User credentials](#user-credentials)
 - [Enpoints](#endpoints)
 - [GET bicycles](#get-bicycles)
 - [GET bicycle](#get-bicycle)
@@ -19,6 +21,8 @@ Content:
 ## BASE URL
 
 The base url of the API is `http://pandabize-web-store.herokuapp.com`.
+
+## User credentials
 
 🚨If you want to try it with Postman, please remember that **you need to be authenticated**🚨
 
