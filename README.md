@@ -5,12 +5,12 @@
 Content:
 
 - [Enpoints](#endpoints)
-- [GET bicycles](#get-bicycles-GET-'/api/v1/bicycles')
-- [GET bicycle](#get-bicycle-GET-'/api/v1/bicycles/:id')
-- [GET customizations](#get-customizations-GET-'/api/v1/customizations/')
-- [GET customization](#get-customization-GET-'/api/v1/customizations/:id')
-- [GET users](#get-users-GET-'/api/v1/users/')
-- [GET user](#get-user-GET-'/api/v1/users/:id')
+- [GET bicycles](#get-bicycles-GET-/api/v1/bicycles)
+- [GET bicycle](#get-bicycle-GET-/api/v1/bicycles/:id)
+- [GET customizations](#get-customizations-GET-/api/v1/customizations/)
+- [GET customization](#get-customization-GET-/api/v1/customizations/:id)
+- [GET users](#get-users-GET-/api/v1/users/)
+- [GET user](#get-user-GET-/api/v1/users/:id)
 - [Get Started](#try-it-locally)
 
 ## BASE URL
@@ -23,7 +23,7 @@ The base url of the API is `http://pandabize-web-store.herokuapp.com`.
 
 ### GET bicycles `GET '/api/v1/bicycles'`
 
-Will give you back a JSON file with a list of all the bicycles available in the application and its customizations.
+Will give you back a JSON file with a list of all bicycles available in the application and its customizations.
 
 <details><summary>See the JSON file</summary><p>
 
@@ -106,7 +106,7 @@ Will give you back a JSON file with al the information regarding a given bicycle
 
 ### GET customizations `GET '/api/v1/customizations'`
 
-Will give you back a JSON file with a list of all the customizations available in the application.
+Will give you back a JSON file with a list of all customizations available in the application.
 
 <details><summary>See the JSON file</summary><p>
 
@@ -248,9 +248,9 @@ Will give you back a JSON file with information regarding a given customization.
 
 </p></details>
 
-### GET users `GET '/api/v1/users/'`
+### GET users `GET '/api/v1/users'`
 
-Will give you back a JSON file with a list of all the users signed up to the application along with an array containing all their orders
+Will give you back a JSON file with a list of all users who signed up to the application along with an array containing all their orders
 
 <details><summary>See the JSON file</summary><p>
 
@@ -348,6 +348,109 @@ Will give you back the information of a unique user and an array with all his/he
 ```
 
 </p></details>
+
+### GET orders `GET '/api/v1/orders'`
+
+Will give you back a JSON file with a list of all orders that users made. It contains the `bicycle_id`, the `amount`, and the `user_id`.
+
+<details><summary>See the JSON file</summary><p>
+
+```json
+[
+  {
+    "id": 8,
+    "bicycle_id": 21,
+    "amount": 18.75,
+    "user_id": 5,
+    "created_at": "2021-03-08T12:25:22.093Z",
+    "updated_at": "2021-03-08T12:25:22.093Z"
+  },
+  {
+    "id": 9,
+    "bicycle_id": 22,
+    "amount": 17.59,
+    "user_id": 5,
+    "created_at": "2021-03-08T12:39:07.400Z",
+    "updated_at": "2021-03-08T12:39:07.400Z"
+  }
+]
+```
+
+</p></details>
+
+### GET order `GET '/api/v1/order/:id'`
+
+Will give you back a JSON file with a specific order along with a customizations array. This array contains all the customizations that the user chose. For instance, in the JSON below, the user chose a `Wheel size` of `16 inches` and a `Pink` `Saddle color`.
+
+<details><summary>See the JSON file</summary><p>
+
+```json
+{
+  "order": {
+    "id": 8,
+    "bicycle_id": 21,
+    "amount": 18.75,
+    "user_id": 5,
+    "created_at": "2021-03-08T12:25:22.093Z",
+    "updated_at": "2021-03-08T12:25:22.093Z"
+  },
+  "customizations": [
+    {
+      "id": 135,
+      "name": "Wheel size",
+      "value": "16 inches",
+      "price": 8.85,
+      "bicycle_id": 21,
+      "created_at": "2021-03-08T11:50:23.347Z",
+      "updated_at": "2021-03-08T11:50:23.347Z"
+    },
+    {
+      "id": 176,
+      "name": "Saddle color",
+      "value": "Pink",
+      "price": 9.9,
+      "bicycle_id": 21,
+      "created_at": "2021-03-08T11:50:23.793Z",
+      "updated_at": "2021-03-08T11:50:23.793Z"
+    }
+  ]
+}
+```
+
+</p></details>
+
+### POST an order `GET '/api/v1/orders'`
+
+Will post a new order to the API. In order to do so, you have to pass the following properties inside the request body:
+
+1. `bicycle_id`: integer
+2. `user_id`: integer
+3. `amount`: float
+4. `costumization_ids`: array of ids
+
+```json
+{
+  "bicycle_id": 17,
+  "user_id": 6,
+  "amount": 20.57,
+  "customization_ids": [123, 125, 128]
+}
+```
+
+This is the API's response (JSON format):
+
+```json
+{
+  "id": 10,
+  "bicycle_id": 17,
+  "amount": 20.57,
+  "user_id": 6,
+  "created_at": "2021-03-08T16:25:30.409Z",
+  "updated_at": "2021-03-08T16:25:30.409Z"
+}
+```
+
+_If you want to see all the customizations related to your order, than you can check out the `GET order 'api/v1/order/:id'` endpoint passing the id of the order that you just created_
 
 ## Try it locally
 
