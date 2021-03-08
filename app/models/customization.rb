@@ -11,7 +11,7 @@ class Customization < ApplicationRecord
 
   has_many :second_customizations, through: :second_customization_associations, source: :first_customization
 
-  # validate :customization_already_exists?
+  validate :customization_already_exists?, on: :create
   validates :name, :value, :price, presence: true
   validates :price, numericality: { greater_than: 0 }
 
@@ -31,9 +31,9 @@ class Customization < ApplicationRecord
     (first_customizations + second_customizations).flatten.uniq
   end
 
-  # def customization_already_exists?
-  #   if Customization.find_by(name: self.name.capitalize, value: self.value.capitalize, bicycle_id: self.bicycle_id).present?
-  #     errors.add(:value, "That bicycle already has a/an #{self.value} #{self.name}")
-  #   end
-  # end
+  def customization_already_exists?
+    if Customization.find_by(name: self.name.capitalize, value: self.value.capitalize, bicycle_id: self.bicycle_id).present?
+      errors.add(:value, "That bicycle already has a/an #{self.value} #{self.name}")
+    end
+  end
 end
