@@ -1,6 +1,7 @@
 import React from "react";
 import { API_BASE_URL } from "../config/variables";
 import useForm from "../hooks/useForm";
+import fetch from "node-fetch";
 
 const UploadBicycle = () => {
   const [formValues, handleInputChange] = useForm({

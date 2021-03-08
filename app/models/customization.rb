@@ -15,8 +15,7 @@ class Customization < ApplicationRecord
   validates :name, :value, :price, presence: true
   validates :price, numericality: { greater_than: 0 }
 
-  before_save :capitalize_customization, unless: :customization_already_exists?
-  before_save :round_price, unless: :customization_already_exists?
+  before_save :round_price, :capitalize_customization
 
 
   def capitalize_customization

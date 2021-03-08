@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import useFetch from "../hooks/useFetch";
 import BicycleCard from "./BicycleCard";
-import icon from "../../assets/images/loading_spinner.png";
 import { userContext } from "../context/userContext";
 
 const BicycleGrid = () => {
@@ -19,14 +18,10 @@ const BicycleGrid = () => {
       </div>
 
       <div className="container">
-        <div className="cards mb-5 mt-4">
-          {loading ? (
-            <img src={icon} className="spinner" />
-          ) : (
-            data?.map((bicycle) => (
-              <BicycleCard key={bicycle.id} {...bicycle} />
-            ))
-          )}
+        <div className="cards mb-5 mt-4 ">
+          {data?.map((bicycle) => (
+            <BicycleCard key={bicycle.id} {...bicycle} />
+          ))}
         </div>
       </div>
     </>

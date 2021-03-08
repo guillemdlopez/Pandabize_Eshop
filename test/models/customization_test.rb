@@ -2,8 +2,8 @@ require 'test_helper'
 
 class CustomizationTest < ActiveSupport::TestCase
   def setup
-    @bicycle = Bicycle.create!(name: 'Cool', description: 'Coolest bicycle ever!')
-    @customization = Customization.create!(name: 'wheel size', value: '17 inches', price: 9.5, bicycle_id: @bicycle.id)
+    @bicycle = Bicycle.create!(name: 'Coolest', description: 'Coolest bicycle in the world!')
+    @customization = Customization.create!(name: 'wheel size', value: '18 inches', price: 9.5, bicycle_id: @bicycle.id)
   end
 
   test 'should save it if it passes all validations' do

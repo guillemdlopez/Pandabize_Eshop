@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the <AppRouter/> component should render it correctly 1`] = `
+<div>
+  Array [
+    <div
+      className="banner"
+    >
+      <div
+        className="container"
+      >
+        <h1
+          className="banner-greeting"
+        >
+          Welcome back, 
+          <strong>
+             
+          </strong>
+        </h1>
+      </div>
+    </div>,
+    <div
+      className="container"
+    >
+      <div
+        className="cards mb-5 mt-4 "
+      />
+    </div>,
+  ]
+</div>
+`;

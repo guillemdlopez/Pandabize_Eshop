@@ -9,3 +9,18 @@
 # #
 # two: {}
 # # column: value
+admin_user:
+  id: 1
+  first_name: Núria
+  last_name: López
+  email: nlopez@gmail.com
+  admin: true
+  encrypted_password: <%= User.new.send(:password_digest, '123456') %>
+
+regular_user:
+  id: 2
+  first_name: Antonio
+  last_name: Morales
+  email: amoralesrosa@gmail.com
+  admin: false
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
