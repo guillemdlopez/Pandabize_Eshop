@@ -58,6 +58,10 @@ const BicycleForm = () => {
   });
   const { displaySuccess, successMsgContent } = successMsg;
 
+  const goBack = () => {
+    history.goBack();
+  };
+
   useEffect(() => {
     fetch(`${API_BASE_URL}${bicycleId}`)
       .then((res) => res.json())
@@ -220,6 +224,9 @@ const BicycleForm = () => {
             </button>
           </form>
         </div>
+        <button className="btn-customized" onClick={goBack}>
+          Go back
+        </button>
         {displaySuccess ? (
           <div className="overlay animate__animated animate__fadeIn"></div>
         ) : (
