@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { borderColor } from "../config/functions";
+import { borderColor } from "../fixtures/functions";
 
 const RimColorInputs = ({
   rimColors,

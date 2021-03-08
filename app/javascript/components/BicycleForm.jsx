@@ -4,7 +4,7 @@ import {
   API_CUSTOMIZATIONS_URL,
   API_ORDERS_URL,
   API_BICYCLES_URL,
-} from "../config/variables";
+} from "../fixtures/variables";
 import { userContext } from "../context/userContext";
 import useForm from "../hooks/useForm";
 import ModalOrder from "./ModalOrder";
@@ -48,7 +48,7 @@ const BicycleForm = () => {
   // be ablte to update the saddle color price
   const [priceSaddle, setPriceSaddle] = useState(0);
 
-  // error msg when the form is not correctly submited
+  // error msg when the form is not correctly submitted
   const [errorMsg, setErrorMsg] = useState({
     displayError: false,
     errorMsgContent: "",
@@ -174,10 +174,8 @@ const BicycleForm = () => {
   return (
     <div className="container animate__animated animate__fadeIn">
       <div className="row align-items-start mt-5 mb-5">
-        <div className="col-lg-7 col-md-12">
-          <div className="d-flex align-items-center mb-4">
-            <img src={photo} className="bicycle-photo" />
-          </div>
+        <div className="col-lg-7 col-md-12 mb-4">
+          <img src={photo} className="bicycle-photo" />
         </div>
         <div className="col-lg-5 col-md-12 order-form">
           <h2 className="mb-0">{name}</h2>

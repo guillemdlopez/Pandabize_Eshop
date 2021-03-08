@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { backgroundColor, isColor } from "../config/functions";
+import { backgroundColor, isColor } from "../fixtures/functions";
 
 const BicycleCard = ({ id, name, description, photo, customizations }) => {
   const lowestPrice = function () {

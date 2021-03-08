@@ -1,5 +1,5 @@
 import React from "react";
-import { borderColor } from "../config/functions";
+import { borderColor } from "../fixtures/functions";
 import PropTypes from "prop-types";
 
 const SaddleColorInputs = ({

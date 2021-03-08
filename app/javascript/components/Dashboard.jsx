@@ -2,7 +2,7 @@ import React, { useContext, useMemo, useState } from "react";
 import OrdersList from "./OrdersList";
 import Sidebar from "./Sidebar";
 
-import { API_USERS_URL } from "../config/variables";
+import { API_USERS_URL } from "../fixtures/variables";
 import { userContext } from "../context/userContext";
 
 const Dashboard = () => {

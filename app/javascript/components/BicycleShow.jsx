@@ -1,8 +1,8 @@
 import React, { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { API_BICYCLES_URL } from "../config/variables";
+import { API_BICYCLES_URL } from "../fixtures/variables";
 import _ from "lodash";
-import { backgroundColor } from "../config/functions";
+import { backgroundColor } from "../fixtures/functions";
 
 const BicycleShow = () => {
   const [bicycle, setBicycle] = useState();
