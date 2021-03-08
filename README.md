@@ -24,7 +24,7 @@ The base url of the API is `http://pandabize-web-store.herokuapp.com`.
 
 ## Endpoints
 
-### GET bicycles `GET '/api/v1/bicycles'`
+#### GET bicycles `GET '/api/v1/bicycles'`
 
 Will give you back a JSON file with a list of all bicycles available in the application and its customizations.
 
@@ -74,7 +74,7 @@ Will give you back a JSON file with a list of all bicycles available in the appl
 
 </p></details>
 
-### GET bicycle `GET '/api/v1/bicycles/:id'`
+#### GET bicycle `GET '/api/v1/bicycles/:id'`
 
 Will give you back a JSON file with al the information regarding a given bicycle (including an array of all its customizations).
 
@@ -107,7 +107,7 @@ Will give you back a JSON file with al the information regarding a given bicycle
 
 </p></details>
 
-### GET customizations `GET '/api/v1/customizations'`
+#### GET customizations `GET '/api/v1/customizations'`
 
 Will give you back a JSON file with a list of all customizations available in the application.
 
@@ -194,7 +194,7 @@ Will give you back a JSON file with a list of all customizations available in th
 
 </p></details>
 
-### GET customization `GET '/api/v1/customizations/:id'`
+#### GET customization `GET '/api/v1/customizations/:id'`
 
 Will give you back a JSON file with information regarding a given customization. it contains the name of the customization (`Wheel size`), and the value (`15 inches`) the name of the bicycle it belongs to (along with the `bicycle_id`) and an array of all the associated customizations to that particular customization.
 
@@ -251,7 +251,7 @@ Will give you back a JSON file with information regarding a given customization.
 
 </p></details>
 
-### GET users `GET '/api/v1/users'`
+#### GET users `GET '/api/v1/users'`
 
 Will give you back a JSON file with a list of all users who signed up to the application along with an array containing all their orders
 
@@ -295,7 +295,7 @@ Will give you back a JSON file with a list of all users who signed up to the app
 
 </p></details>
 
-### GET user `GET '/api/v1/users/:id'`
+#### GET user `GET '/api/v1/users/:id'`
 
 Will give you back the information of a unique user and an array with all his/her orders and the customizations that each other contains.
 
@@ -352,7 +352,7 @@ Will give you back the information of a unique user and an array with all his/he
 
 </p></details>
 
-### GET orders `GET '/api/v1/orders'`
+#### GET orders `GET '/api/v1/orders'`
 
 Will give you back a JSON file with a list of all orders that users made. It contains the `bicycle_id`, the `amount`, and the `user_id`.
 
@@ -381,7 +381,7 @@ Will give you back a JSON file with a list of all orders that users made. It con
 
 </p></details>
 
-### GET order `GET '/api/v1/orders/:id'`
+#### GET order `GET '/api/v1/orders/:id'`
 
 Will give you back a JSON file with a specific order along with a customizations array. This array contains all the customizations that the user chose. For instance, in the JSON below, the user chose a `Wheel size` of `16 inches` and a `Pink` `Saddle color`.
 
@@ -424,7 +424,7 @@ Will give you back a JSON file with a specific order along with a customizations
 
 </p></details>
 
-### POST an order `GET '/api/v1/orders'`
+#### POST an order `POST '/api/v1/orders'`
 
 Will post a new order to the API. In order to do so, you have to pass the following properties inside the request body:
 
