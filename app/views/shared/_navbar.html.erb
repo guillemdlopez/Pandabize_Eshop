@@ -3,13 +3,15 @@
         <%= link_to root_path do %>
             <h3 class="mb-0 store-name">Pandabize</h3>
         <% end %>
-        <div class="d-flex align-items-center">
-            <ul class="inline-list mb-0">
-                <li><%= link_to 'Dashboard', dashboard_path %></li>
-            </ul>
-            <% if current_user && current_user.avatar.attached? %>
-            <%= cl_image_tag current_user.avatar.key, class: 'avatar-small' %>
-            <% end %>
-        </div>
+        <% if current_user %>
+            <div class="d-flex align-items-center">
+                <ul class="inline-list mb-0">
+                    <li><%= link_to 'Dashboard', dashboard_path %></li>
+                </ul>
+                <% if current_user.avatar.attached? %>
+                <%= cl_image_tag current_user.avatar.key, class: 'avatar-small' %>
+                <% end %>
+            </div>
+        <% end %>
     </div>
 </div>
