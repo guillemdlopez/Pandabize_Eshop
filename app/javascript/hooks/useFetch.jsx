@@ -19,8 +19,13 @@ const useFetch = (url) => {
   useEffect(() => {
     setState({ data: null, loading: true, error: null });
     fetch(url)
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error(`There has been a problem ${res.status}`);
+
+        return res.json();
+      })
       .then((data) => {
+        if (!data) throw new Error("No data was found!");
         if (isMounted.current) {
           setState({
             loading: false,
@@ -28,6 +33,9 @@ const useFetch = (url) => {
             data,
           });
         }
+      })
+      .catch((err) => {
+        console.log(err);
       });
   }, [url]);
 

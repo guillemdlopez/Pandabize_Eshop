@@ -20,7 +20,10 @@ const Sidebar = ({ avatar, first_name, last_name, orders }) => {
             <strong>Orders: </strong> {orders?.length}
           </li>
           <li>
-            <button className="btn-customized pl-0" onClick={goToHomePage}>
+            <button
+              className="btn btn-outline-success btn-sm"
+              onClick={goToHomePage}
+            >
               Continue shopping
             </button>
           </li>

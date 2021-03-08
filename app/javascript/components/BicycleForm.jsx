@@ -48,7 +48,9 @@ const BicycleForm = () => {
   const [price, setPrice] = useState(0);
   // be ablte to update the wheel size price
   const [priceWheel, setPriceWheel] = useState(0);
+  // be ablte to update the rim color price
   const [priceRim, setPriceRim] = useState(0);
+  // be ablte to update the saddle color price
   const [priceSaddle, setPriceSaddle] = useState(0);
 
   // error msg when the form is not correctly submited
@@ -58,7 +60,7 @@ const BicycleForm = () => {
   });
   const { displayError, errorMsgContent } = errorMsg;
 
-  // error msg when the form is correctly submited
+  // success msg when the form is correctly submited
   const [successMsg, setSuccessMsg] = useState({
     displaySuccess: false,
     successMsgContent: "",
@@ -71,8 +73,19 @@ const BicycleForm = () => {
 
   useEffect(() => {
     fetch(`${API_BASE_URL}${bicycleId}`)
-      .then((res) => res.json())
-      .then((data) => setBicycle(data));
+      .then((res) => {
+        if (!res.ok) throw new Error(`Bicycle not found ${res.status}`);
+
+        return res.json();
+      })
+      .then((data) => {
+        if (!data) throw new Error(`No bicycle was found!`);
+
+        setBicycle(data);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   }, [bicycleId]);
 
   const fetchAssociations = (id, { target }) => {
@@ -83,8 +96,19 @@ const BicycleForm = () => {
     });
     setAvailableCustomizations([]);
     fetch(`${API_CUSTOMIZATIONS_URL}${id}`)
-      .then((res) => res.json())
-      .then((data) => setAvailableCustomizations(data.associations));
+      .then((res) => {
+        if (!res.ok) throw new Error(`Customizations not found ${res.status}`);
+
+        return res.json();
+      })
+      .then((data) => {
+        if (!data) throw new Error("No customizations were found!");
+        setAvailableCustomizations(data.associations);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+
     setErrorMsg({ displayError: false, errorMsgContent: "" });
   };
 
@@ -142,7 +166,7 @@ const BicycleForm = () => {
         }),
       })
         .then((res) => res.json())
-        .then((data) => console.log(data.error));
+        .then((data) => console.log(data));
 
       setErrorMsg({ displayError: false, errorMsgContent: "" });
       setSuccessMsg({

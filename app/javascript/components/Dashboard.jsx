@@ -8,17 +8,24 @@ import { userContext } from "../context/userContext";
 const Dashboard = () => {
   const [userInfo, setUserInfo] = useState({});
 
-  const { user, userId } = useContext(userContext);
+  const { userId } = useContext(userContext);
 
-  const getUserInfo = async (id) => {
-    const getJSON = await fetch(`${API_USERS_URL}${userId}`);
-    const res = await getJSON;
-    const data = await res.json();
-    setUserInfo(data);
+  const getUserInfo = async () => {
+    try {
+      const getJSON = await fetch(`${API_USERS_URL}${userId}`);
+      if (!getJSON.ok) throw new Error(`Problem getting location data`);
+
+      const res = await getJSON;
+      if (!res.ok) throw new Error(`Bicycle not found ${res.status}`);
+
+      const data = await res.json();
+      setUserInfo(data);
+    } catch (err) {
+      console.error(err);
+    }
   };
   useMemo(() => getUserInfo(userId), [userId]);
   const currentUser = userInfo?.user;
-  console.log(currentUser);
 
   return (
     <div className="container">
