@@ -5,7 +5,12 @@
 Content:
 
 - [Enpoints](#endpoints)
-- [GET bicycles](#get-bicycles-GET-'api/v1/bicycles')
+- [GET bicycles](#get-bicycles-GET-'/api/v1/bicycles')
+- [GET bicycle](#get-bicycle-GET-'/api/v1/bicycles/:id')
+- [GET customizations](#get-customizations-GET-'/api/v1/customizations/')
+- [GET customization](#get-customization-GET-'/api/v1/customizations/:id')
+- [GET users](#get-users-GET-'/api/v1/users/')
+- [GET user](#get-user-GET-'/api/v1/users/:id')
 - [Get Started](#try-it-locally)
 
 ## BASE URL
@@ -186,7 +191,7 @@ Will give you back a JSON file with a list of all the customizations available i
 
 </p></details>
 
-### GET customization `GET '/api/v1/customization/:id'`
+### GET customization `GET '/api/v1/customizations/:id'`
 
 Will give you back a JSON file with information regarding a given customization. it contains the name of the customization (`Wheel size`), and the value (`15 inches`) the name of the bicycle it belongs to (along with the `bicycle_id`) and an array of all the associated customizations to that particular customization.
 
@@ -287,7 +292,7 @@ Will give you back a JSON file with a list of all the users signed up to the app
 
 </p></details>
 
-### GET user `GET '/api/v1/user/:id'`
+### GET user `GET '/api/v1/users/:id'`
 
 Will give you back the information of a unique user and an array with all his/her orders and the customizations that each other contains.
 
