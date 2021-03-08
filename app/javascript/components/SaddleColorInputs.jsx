@@ -36,7 +36,6 @@ const SaddleColorInputs = ({
                 value={color.id}
                 onClick={(e) => {
                   handleInputChange(e);
-                  setPriceSaddle(0);
                   setPriceSaddle(color.price);
                   setPrice(price + color.price);
                   setErrorMsg({ displayError: false, errorMsgContent: "" });

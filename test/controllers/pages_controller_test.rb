@@ -30,4 +30,10 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
   end
+
+  test 'should get the dashboard' do
+    get '/dashboard'
+
+    assert_response :success
+  end
 end

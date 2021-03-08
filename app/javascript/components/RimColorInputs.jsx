@@ -33,7 +33,6 @@ const RimColorInputs = ({
                 value={color.id}
                 onClick={(e) => {
                   handleInputChange(e);
-                  setPriceRim((priceRim = 0));
                   setPriceRim(color.price);
                   setPrice(price + color.price);
                   setErrorMsg({ displayError: false, errorMsgContent: "" });

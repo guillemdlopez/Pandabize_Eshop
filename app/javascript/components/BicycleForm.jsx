@@ -103,10 +103,12 @@ const BicycleForm = () => {
     e.preventDefault();
     if (isFormValid()) {
       const customs = [+wheelSize, +rimColor, +saddleColor];
+      console.log(customs);
 
       if (customs.includes(0)) {
         const ind = customs.findIndex((custom) => custom === 0);
         customs.splice(ind, 1);
+        console.log(customs);
       }
 
       const roundedPrice = price.toFixed(2);
@@ -124,7 +126,7 @@ const BicycleForm = () => {
         }),
       })
         .then((res) => res.json())
-        .then((data) => console.log(data));
+        .then((data) => console.log(data.error));
 
       setErrorMsg({ displayError: false, errorMsgContent: "" });
       setSuccessMsg({
@@ -167,8 +169,8 @@ const BicycleForm = () => {
                 rimColors={rimColors}
                 handleInputChange={handleInputChange}
                 setPrice={setPrice}
-                setPriceRim={setPriceRim}
                 priceRim={priceRim}
+                setPriceRim={setPriceRim}
                 price={price}
                 setErrorMsg={setErrorMsg}
                 displayError={displayError}

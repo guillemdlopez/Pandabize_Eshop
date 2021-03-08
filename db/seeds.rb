@@ -23,7 +23,7 @@ file_2 = URI.open('https://images.unsplash.com/photo-1599566150163-29194dcaad36?
 user_2 = User.create!(first_name: 'Antonio', last_name: 'Morales', email: 'amoralesrosa@gmail.com', password: 'password')
 user_2.avatar.attach(io: file_2, filename: 'avatar-antonio.jpg', content_type: 'image/jpg')
 
-puts "Attached picture to first user: #{user_2.full_name}"
+puts "Attached picture to second user: #{user_2.full_name}"
 
 puts "Created #{User.all.count} users: #{User.first.full_name} and #{User.second.full_name}"
 
