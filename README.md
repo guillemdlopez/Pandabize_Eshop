@@ -2,11 +2,13 @@
 
 > Pandabize is a web application that allows the user to buy bicycles fast and easily unlike any other!
 
-### BASE URL
+## BASE URL
 
 The base url of the API is `http://pandabize-web-store.herokuapp.com`.
 
 🚨If you want to try it with Postman, please remember that **you need to be authenticated**🚨
+
+## Endpoints
 
 ### GET bicycles `GET '/api/v1/bicycles'`
 
@@ -52,4 +54,22 @@ Will give you back a JSON file with a list of all the bicycles available in the 
     ]
   }
 ]
+```
+
+## Try it locally
+
+```bash
+git clone git@github.com:guillemdlopez/Pandabize_Eshop.git
+cd Pandabize_Eshop
+rm -rf .git
+yarn install
+stt # Open on Sublime Text
+```
+
+```bash
+git clone git@github.com:guillemdlopez/Pandabize_Eshop.git
+cd Pandabize_Eshop
+rm -rf .git
+yarn install
+stt # Open on VS Code
 ```
