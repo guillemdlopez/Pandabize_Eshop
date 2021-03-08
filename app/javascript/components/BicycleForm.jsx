@@ -2,8 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import {
   API_CUSTOMIZATIONS_URL,
-  API_BASE_URL,
   API_ORDERS_URL,
+  API_BICYCLES_URL,
 } from "../config/variables";
 import { userContext } from "../context/userContext";
 import ModalOrder from "./ModalOrder";
@@ -72,7 +72,7 @@ const BicycleForm = () => {
   };
 
   useEffect(() => {
-    fetch(`${API_BASE_URL}${bicycleId}`)
+    fetch(`${API_BICYCLES_URL}${bicycleId}`)
       .then((res) => {
         if (!res.ok) throw new Error(`Bicycle not found ${res.status}`);
 

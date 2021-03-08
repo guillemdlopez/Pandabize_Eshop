@@ -1,5 +1,4 @@
 import { TinyColor } from "@ctrl/tinycolor";
-import { API_BASE_URL } from "./variables";
 
 // returns true or false weather a customization is a color or not
 export const isColor = function (value) {

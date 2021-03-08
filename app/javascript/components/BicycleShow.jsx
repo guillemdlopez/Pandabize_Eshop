@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { API_BASE_URL } from "../config/variables";
+import { API_BICYCLES_URL } from "../config/variables";
 import _ from "lodash";
 import { backgroundColor } from "../config/functions";
 
@@ -25,7 +25,7 @@ const BicycleShow = () => {
     }
   };
 
-  useMemo(() => getBicycle(`${API_BASE_URL}${bicycleId}`), [bicycleId]);
+  useMemo(() => getBicycle(`${API_BICYCLES_URL}${bicycleId}`), [bicycleId]);
 
   const wheelSize = bicycle?.customizations.filter(
     (custom) => custom.name === "Wheel size"

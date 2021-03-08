@@ -5,7 +5,7 @@
 Content:
 
 - [Enpoints](#endpoints)
-- [GET bicycles](#get-bicycles-GET-api/v1/bicycles)
+- [GET bicycles](#get-bicycles-GET-'api/v1/bicycles')
 - [Get Started](#try-it-locally)
 
 ## BASE URL
@@ -174,7 +174,7 @@ Will give you back a JSON file with a list of all the customizations available i
 }
 ```
 
-### GET customizations `GET '/api/v1/customization/:id'`
+### GET customization `GET '/api/v1/customization/:id'`
 
 Will give you back a JSON file with information regarding a given customization. it contains the name of the customization (`Wheel size`), and the value (`15 inches`) the name of the bicycle it belongs to (along with the `bicycle_id`) and an array of all the associated customizations to that particular customization.
 
@@ -226,6 +226,8 @@ Will give you back a JSON file with information regarding a given customization.
   ]
 }
 ```
+
+### GET users `GET '/api/v1/customization/:id'`
 
 ## Try it locally
 
