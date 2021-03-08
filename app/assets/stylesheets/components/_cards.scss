@@ -3,6 +3,7 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   transition: 0.5s;
   height: 442px;
+  background: white;
 
   &:hover {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
@@ -16,7 +17,7 @@
 .bike-img {
   width: 100%;
   height: 250px;
-  object-fit: cover;
+  object-fit: contain;
   transition: 0.5s;
 }
 
@@ -39,8 +40,8 @@
 
 .dashboard-card-img {
   width: 150px;
-  height: 100%;
-  object-fit: cover;
+  height: inherit;
+  object-fit: contain;
   width: 197px;
 }
 
