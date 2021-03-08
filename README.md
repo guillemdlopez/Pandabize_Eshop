@@ -76,6 +76,8 @@ Will give you back a JSON file with a list of all bicycles available in the appl
 
 </p></details>
 
+---
+
 ### GET bicycle
 
 #### `GET '/api/v1/bicycles/:id'`
@@ -110,6 +112,8 @@ Will give you back a JSON file with al the information regarding a given bicycle
 ```
 
 </p></details>
+
+---
 
 ### GET customizations
 
@@ -200,6 +204,8 @@ Will give you back a JSON file with a list of all customizations available in th
 
 </p></details>
 
+---
+
 ### GET customization
 
 #### `GET '/api/v1/customizations/:id'`
@@ -259,6 +265,8 @@ Will give you back a JSON file with information regarding a given customization.
 
 </p></details>
 
+---
+
 ### GET users
 
 #### `GET '/api/v1/users'`
@@ -304,6 +312,8 @@ Will give you back a JSON file with a list of all users who signed up to the app
 ```
 
 </p></details>
+
+---
 
 ### GET user
 
@@ -364,6 +374,8 @@ Will give you back the information of a unique user and an array with all his/he
 
 </p></details>
 
+---
+
 ### GET orders
 
 #### `GET '/api/v1/orders'`
@@ -394,6 +406,8 @@ Will give you back a JSON file with a list of all orders that users made. It con
 ```
 
 </p></details>
+
+---
 
 #### GET order
 
@@ -439,6 +453,8 @@ Will give you back a JSON file with a specific order along with a customizations
 ```
 
 </p></details>
+
+---
 
 ### POST order
 
