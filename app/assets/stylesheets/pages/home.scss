@@ -4,9 +4,36 @@
   grid-gap: 20px;
 }
 
+.spinner {
+  margin: 5rem auto;
+  text-align: center;
+  height: 6rem;
+  width: 6rem;
+  animation: rotate 2s infinite linear;
+}
+
 .spinner-div {
   display: flex;
   justify-content: center;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.color-value-card {
+  background-color: rgb(0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+  display: inline-flex;
 }
 
 @media (max-width: 1200px) {

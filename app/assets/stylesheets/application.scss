@@ -26,13 +26,14 @@ body {
 
 .btn-success,
 .btn-primary {
-  border: 1px solid $main-black;
-  background: $main-black;
+  border: 1px solid $main-black !important;
+  background: $main-black !important;
 
-  &:hover {
-    background: $main-black;
-    color: white;
-    border: 1px solid $main-black;
+  &:hover,
+  &:active {
+    background-color: $main-black !important;
+    color: white !important;
+    border: 1px solid $main-black !important;
   }
 }
 
@@ -40,10 +41,11 @@ body {
   color: $main-black;
   border: 1px solid $main-black;
 
-  &:hover {
-    background-color: $main-black;
-    color: white;
-    border: 1px solid $main-black;
+  &:hover,
+  &:active {
+    background-color: $main-black !important;
+    color: white !important;
+    border: 1px solid $main-black !important;
   }
 }
 
@@ -62,11 +64,6 @@ a {
     text-decoration: none;
     color: $main-black;
   }
-}
-
-.container {
-  width: 1200px;
-  margin: 0 auto;
 }
 
 // JS

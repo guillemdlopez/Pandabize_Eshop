@@ -1,0 +1,47 @@
+// BicycleForm component style
+.header-form {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+}
+
+.customized-error {
+  background: #f57c7c;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: bolder;
+  text-align: center;
+  border: 2px solid red;
+  color: white;
+}
+
+.block-list-center,
+.customizations-list,
+.block-list-left {
+  padding-left: 0px;
+
+  li {
+    display: block;
+  }
+
+  #wheel-sizes,
+  #rim-colors,
+  #saddle-colors {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  #rim-colors,
+  #saddle-colors {
+    width: fit-content;
+    height: 43px;
+  }
+}
+
+.block-list-center {
+  text-align: center;
+}
+
+.block-list-left {
+  text-align: left;
+}
