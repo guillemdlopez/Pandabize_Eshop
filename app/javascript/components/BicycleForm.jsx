@@ -6,6 +6,7 @@ import {
   API_BICYCLES_URL,
 } from "../config/variables";
 import { userContext } from "../context/userContext";
+import useForm from "../hooks/useForm";
 import ModalOrder from "./ModalOrder";
 import RimColorInputs from "./RimColorInputs";
 import SaddleColorInputs from "./SaddleColorInputs";
@@ -29,20 +30,14 @@ const BicycleForm = () => {
   // retrieving available Customizations from the API
   const [availableCustomizations, setAvailableCustomizations] = useState([]);
 
-  const [formValues, setFormValues] = useState({
+  const [formValues, handleInputChange, setFormValues] = useForm({
     wheelSize: "",
     rimColor: "",
     saddleColor: "",
   });
+
   console.log(formValues);
   const { wheelSize, rimColor, saddleColor } = formValues;
-
-  const handleInputChange = ({ target }) => {
-    setFormValues({
-      ...formValues,
-      [target.name]: target.value,
-    });
-  };
 
   // be able to update the bicycle's price
   const [price, setPrice] = useState(0);
