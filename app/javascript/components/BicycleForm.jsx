@@ -36,7 +36,6 @@ const BicycleForm = () => {
     saddleColor: "",
   });
 
-  console.log(formValues);
   const { wheelSize, rimColor, saddleColor } = formValues;
 
   // be able to update the bicycle's price
@@ -138,12 +137,10 @@ const BicycleForm = () => {
     e.preventDefault();
     if (isFormValid()) {
       const customs = [+wheelSize, +rimColor, +saddleColor];
-      console.log(customs);
 
       if (customs.includes(0)) {
         const ind = customs.findIndex((custom) => custom === 0);
         customs.splice(ind, 1);
-        console.log(customs);
       }
 
       const roundedPrice = price.toFixed(2);

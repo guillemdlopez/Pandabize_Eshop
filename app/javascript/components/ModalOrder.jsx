@@ -14,7 +14,6 @@ const ModalOrder = ({
 }) => {
   const { user } = useContext(userContext);
   const history = useHistory();
-  console.log(typeof displaySuccess);
 
   const goToDashboard = () => {
     history.push("/dashboard");
