@@ -4,7 +4,6 @@ import BicycleForm from "./BicycleForm";
 import BicycleGrid from "./BicycleGrid";
 import BicycleShow from "./BicycleShow";
 import Dashboard from "./Dashboard";
-import UploadBicycle from "./UploadBicycle";
 
 const AppRouter = () => {
   return (
@@ -12,7 +11,6 @@ const AppRouter = () => {
       <Router>
         <Switch>
           <Route exact path="/" component={BicycleGrid} />
-          <Route exact path="/bicycle/upload" component={UploadBicycle} />
           <Route exact path="/bicycle/:bicycleId" component={BicycleShow} />
           <Route
             exact

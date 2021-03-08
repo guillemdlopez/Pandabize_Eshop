@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'bicycle/:id', to: 'pages#home', as: :bicycle_show
   get 'bicycle/:id/order', to: 'pages#home', as: :bicycle_form
-  get 'bicycle/upload', to: "pages#home", as: :bicycle_upload
   get 'dashboard', to: 'pages#home', as: :dashboard
 
   resources :bicycles, only: [:new, :create]

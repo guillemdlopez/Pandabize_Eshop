@@ -28,7 +28,7 @@ const Dashboard = () => {
   const currentUser = userInfo?.user;
 
   return (
-    <div className="container">
+    <div className="container animate__animated animate__fadeIn">
       <div className="row mt-5">
         <div className="col-lg-4 col-md-12 mb-4">
           <Sidebar {...currentUser} orders={userInfo.orders} />
