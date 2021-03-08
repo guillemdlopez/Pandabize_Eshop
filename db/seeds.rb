@@ -30,13 +30,13 @@ puts "Created #{User.all.count} users: #{User.first.full_name} and #{User.second
 
 puts "2) BICYCLES"
 
-file_3 = URI.open('https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')
+file_3 = URI.open('https://ibkbike.com/img/cms/turbo-levo-800c2-compressor.jpg')
 bicy_1 = Bicycle.create!(name: 'Scott SUB Cross 10', description: 'The SCOTT SUB Cross 10 puts comfort and user-friendliness first. It is perfect for tours or daily shopping. With Remote Lockout suspension fork and Syncros components the SUB Cross is perfectly equipped.')
 bicy_1.photo.attach(io: file_3, filename: 'coolest-bike-img.jpg', content_type: 'image/jpg')
 
 puts "Attached picture to first bicycle: #{bicy_1.name}"
 
-file_4 = URI.open('https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2103&q=80')
+file_4 = URI.open('https://ibkbike.com/img/cms/Kenevo-800c2-compressor.jpg')
 bicy_2 = Bicycle.create!(name: 'New School XC', description: 'This is the ultimate XC race bike. Ground-breaking suspension, aggressive geometry and feathery weight let you go full gas from the gun. Grip where others slip. Attack where others lack.')
 bicy_2.photo.attach(io: file_4, filename: 'bike-fastest-img.jpg', content_type: 'image/jpg')
 
