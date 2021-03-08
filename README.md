@@ -455,7 +455,7 @@ This is the API's response (JSON format):
 }
 ```
 
-_If you want to see all the customizations related to your order, than you can check out the `GET order 'api/v1/order/:id'` endpoint specifying the id of the order that you just created_
+_If you want to see all the customizations related to your order, then you can check out the `GET order 'api/v1/order/:id'` endpoint specifying the id of the order you just created_
 
 ## Try it locally
 
