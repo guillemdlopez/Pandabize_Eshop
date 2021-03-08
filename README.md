@@ -20,6 +20,8 @@ The base url of the API is `http://pandabize-web-store.herokuapp.com`.
 
 Will give you back a JSON file with a list of all the bicycles available in the application and its customizations.
 
+<details><summary>See the JSON file</summary><p>
+
 ```json
 [
   {
@@ -62,11 +64,15 @@ Will give you back a JSON file with a list of all the bicycles available in the 
 ]
 ```
 
+</p></details>
+
 ### GET bicycle `GET '/api/v1/bicycles/:id'`
 
 Will give you back a JSON file with al the information regarding a given bicycle (including an array of all its customizations).
 
 🚨**You need to pass the `:id` of the bicycle you are insterested in**🚨
+
+<details><summary>See the JSON file</summary><p>
 
 ```json
 {
@@ -91,9 +97,13 @@ Will give you back a JSON file with al the information regarding a given bicycle
 }
 ```
 
+</p></details>
+
 ### GET customizations `GET '/api/v1/customizations'`
 
 Will give you back a JSON file with a list of all the customizations available in the application.
+
+<details><summary>See the JSON file</summary><p>
 
 ```json
 {
@@ -174,11 +184,15 @@ Will give you back a JSON file with a list of all the customizations available i
 }
 ```
 
+</p></details>
+
 ### GET customization `GET '/api/v1/customization/:id'`
 
 Will give you back a JSON file with information regarding a given customization. it contains the name of the customization (`Wheel size`), and the value (`15 inches`) the name of the bicycle it belongs to (along with the `bicycle_id`) and an array of all the associated customizations to that particular customization.
 
 🚨**Notice that you have to pass the `:id` of the customization as it is specified on the subtitle**🚨
+
+<details><summary>See the JSON file</summary><p>
 
 ```json
 {
@@ -227,7 +241,108 @@ Will give you back a JSON file with information regarding a given customization.
 }
 ```
 
-### GET users `GET '/api/v1/customization/:id'`
+</p></details>
+
+### GET users `GET '/api/v1/users/'`
+
+Will give you back a JSON file with a list of all the users signed up to the application along with an array containing all their orders
+
+<details><summary>See the JSON file</summary><p>
+
+```json
+[
+  {
+    "id": 5,
+    "email": "guillemdelas@hotmail.com",
+    "created_at": "2021-03-08T11:50:04.097Z",
+    "updated_at": "2021-03-08T11:50:04.195Z",
+    "first_name": "Guillem",
+    "last_name": "Delás",
+    "admin": true,
+    "avatar": "http://res.cloudinary.com/doker55/image/upload/a7kv87ve2h4gm8z14dw48ldjjqt7.jpg",
+    "orders": [
+      {
+        "id": 8,
+        "bicycle_id": 21,
+        "amount": 18.75,
+        "user_id": 5,
+        "created_at": "2021-03-08T12:25:22.093Z",
+        "updated_at": "2021-03-08T12:25:22.093Z"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "email": "amoralesrosa@gmail.com",
+    "created_at": "2021-03-08T11:50:05.807Z",
+    "updated_at": "2021-03-08T11:50:05.831Z",
+    "first_name": "Antonio",
+    "last_name": "Morales",
+    "admin": false,
+    "avatar": "http://res.cloudinary.com/doker55/image/upload/hpgc5s4gmo1pvcwmzxoxi1bdlk5p.jpg",
+    "orders": []
+  }
+]
+```
+
+</p></details>
+
+### GET user `GET '/api/v1/user/:id'`
+
+Will give you back the information of a unique user and an array with all his/her orders and the customizations that each other contains.
+
+🚨**Notice that you have to pass the `:id` of the user as it is specified on the subtitle**🚨
+
+<details><summary>See the JSON file</summary><p>
+
+```json
+{
+  "user": {
+    "id": 5,
+    "email": "guillemdelas@hotmail.com",
+    "created_at": "2021-03-08T11:50:04.097Z",
+    "updated_at": "2021-03-08T11:50:04.195Z",
+    "first_name": "Guillem",
+    "last_name": "Delás",
+    "admin": true,
+    "avatar": "http://res.cloudinary.com/doker55/image/upload/a7kv87ve2h4gm8z14dw48ldjjqt7.jpg"
+  },
+  "orders": [
+    {
+      "id": 8,
+      "bicycle_id": 21,
+      "amount": 18.75,
+      "user_id": 5,
+      "created_at": "2021-03-08T12:25:22.093Z",
+      "updated_at": "2021-03-08T12:25:22.093Z",
+      "bicycle": "Balck Panther 2020",
+      "photo": "http://res.cloudinary.com/doker55/image/upload/veedlj6jbfyqj57ggnvdtlwzv3g7.jpg",
+      "customizations": [
+        {
+          "id": 135,
+          "name": "Wheel size",
+          "value": "16 inches",
+          "price": 8.85,
+          "bicycle_id": 21,
+          "created_at": "2021-03-08T11:50:23.347Z",
+          "updated_at": "2021-03-08T11:50:23.347Z"
+        },
+        {
+          "id": 176,
+          "name": "Saddle color",
+          "value": "Pink",
+          "price": 9.9,
+          "bicycle_id": 21,
+          "created_at": "2021-03-08T11:50:23.793Z",
+          "updated_at": "2021-03-08T11:50:23.793Z"
+        }
+      ]
+    }
+  ]
+}
+```
+
+</p></details>
 
 ## Try it locally
 
