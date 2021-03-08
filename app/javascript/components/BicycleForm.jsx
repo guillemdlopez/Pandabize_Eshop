@@ -35,6 +35,7 @@ const BicycleForm = () => {
     saddleColor: "",
   });
   console.log(formValues);
+  const { wheelSize, rimColor, saddleColor } = formValues;
 
   const handleInputChange = ({ target }) => {
     setFormValues({
@@ -42,8 +43,6 @@ const BicycleForm = () => {
       [target.name]: target.value,
     });
   };
-
-  const { wheelSize, rimColor, saddleColor } = formValues;
 
   // be able to update the bicycle's price
   const [price, setPrice] = useState(0);
@@ -213,14 +212,15 @@ const BicycleForm = () => {
             <hr />
             <ul className="block-list-left">
               <li>
-                <strong className="text-muted">Wheel size:</strong> {priceWheel}
-                €
+                <strong className="text-muted">Wheel size: </strong>
+                {priceWheel} €
               </li>
               <li>
-                <strong className="text-muted">Rim color:</strong> {priceRim} €
+                <strong className="text-muted">Rim color: </strong>
+                {priceRim} €
               </li>
               <li>
-                <strong className="text-muted">Saddle color:</strong>{" "}
+                <strong className="text-muted">Saddle color: </strong>
                 {priceSaddle} €
               </li>
               <li className="mt-4">
@@ -236,10 +236,10 @@ const BicycleForm = () => {
               Buy
             </button>
           </form>
+          <button className="btn-customized" onClick={goBack}>
+            Go back
+          </button>
         </div>
-        <button className="btn-customized" onClick={goBack}>
-          Go back
-        </button>
         {displaySuccess ? (
           <div className="overlay animate__animated animate__fadeIn"></div>
         ) : (
