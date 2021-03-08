@@ -12,8 +12,8 @@ The base url of the API is `http://pandabize-web-store.herokuapp.com`.
 
 Will give you back a JSON file with a list of all the bicycles available in the application and its customizations.
 
-```bash
-
+```json
+[
   {
     "id": 17,
     "name": "Scott SUB Cross 10",
@@ -51,4 +51,5 @@ Will give you back a JSON file with a list of all the bicycles available in the 
       }
     ]
   }
+]
 ```
