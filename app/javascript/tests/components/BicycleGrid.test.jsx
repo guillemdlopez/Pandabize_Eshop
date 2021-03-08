@@ -14,8 +14,4 @@ describe("Testing the <BicycleGrid/> component", () => {
       <BicycleGrid />
     </userContext.Provider>
   );
-  test("should ", () => {
-    console.log(wrapper.html());
-    console.log(wrapper.find("h1").text());
-  });
 });
