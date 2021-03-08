@@ -11,7 +11,6 @@ import ModalOrder from "./ModalOrder";
 import RimColorInputs from "./RimColorInputs";
 import SaddleColorInputs from "./SaddleColorInputs";
 import WheelSizeInputs from "./WheelSizeInputs";
-import fetch from "node-fetch";
 
 const BicycleForm = () => {
   // we able to navigate and to get the bicycleId from the url params
