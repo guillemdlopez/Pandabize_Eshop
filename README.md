@@ -409,7 +409,7 @@ Will give you back a JSON file with a list of all orders that users made. It con
 
 ---
 
-#### GET order
+### GET order
 
 #### `GET '/api/v1/orders/:id'`
 
