@@ -6,6 +6,7 @@ Content:
 
 - [Enpoints](#endpoints)
 - [GET bicycles](#get-bicycles-GET-api/v1/bicycles)
+- [Get Started](#try-it-locally)
 
 ## BASE URL
 
@@ -85,7 +86,7 @@ Will give you back a JSON file with al the information regarding a given bicycle
       "created_at": "2021-03-08T11:50:23.202Z",
       "updated_at": "2021-03-08T11:50:23.202Z"
     },
-    ...
+    {...},
   ]
 }
 ```
