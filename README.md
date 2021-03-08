@@ -196,7 +196,7 @@ Will give you back a JSON file with a list of all customizations available in th
 
 #### GET customization `GET '/api/v1/customizations/:id'`
 
-Will give you back a JSON file with information regarding a given customization. it contains the name of the customization (`Wheel size`), and the value (`15 inches`) the name of the bicycle it belongs to (along with the `bicycle_id`) and an array of all the associated customizations to that particular customization.
+Will give you back a JSON file with information regarding a given customization. It contains the name of the customization (`Wheel size`), the value (`15 inches`) and the name of the bicycle it belongs to (along with the `bicycle_id`) and an array of all the associated customizations to that particular customization.
 
 🚨**Notice that you have to pass the `:id` of the customization as it is specified on the subtitle**🚨
 
@@ -297,7 +297,7 @@ Will give you back a JSON file with a list of all users who signed up to the app
 
 #### GET user `GET '/api/v1/users/:id'`
 
-Will give you back the information of a unique user and an array with all his/her orders and the customizations that each other contains.
+Will give you back the information of a unique user and an array with all his/her orders and the customizations that each one contains.
 
 🚨**Notice that you have to pass the `:id` of the user as it is specified on the subtitle**🚨
 
@@ -455,7 +455,7 @@ This is the API's response (JSON format):
 }
 ```
 
-_If you want to see all the customizations related to your order, than you can check out the `GET order 'api/v1/order/:id'` endpoint passing the id of the order that you just created_
+_If you want to see all the customizations related to your order, than you can check out the `GET order 'api/v1/order/:id'` endpoint specifying the id of the order that you just created_
 
 ## Try it locally
 
