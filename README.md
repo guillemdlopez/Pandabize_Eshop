@@ -11,6 +11,9 @@ Content:
 - [GET customization](#get-customization-GET-/api/v1/customizations/:id)
 - [GET users](#get-users-GET-/api/v1/users/)
 - [GET user](#get-user-GET-/api/v1/users/:id)
+- [GET orders](#get-orders-GET-/api/v1/orders/)
+- [GET order](#get-order-GET-/api/v1/orders/:id)
+- [POST order](#post-an-order-GET-/api/v1/orders/)
 - [Get Started](#try-it-locally)
 
 ## BASE URL
@@ -378,9 +381,11 @@ Will give you back a JSON file with a list of all orders that users made. It con
 
 </p></details>
 
-### GET order `GET '/api/v1/order/:id'`
+### GET order `GET '/api/v1/orders/:id'`
 
 Will give you back a JSON file with a specific order along with a customizations array. This array contains all the customizations that the user chose. For instance, in the JSON below, the user chose a `Wheel size` of `16 inches` and a `Pink` `Saddle color`.
+
+🚨**Notice that you have to pass the `:id` of the order as it is specified on the subtitle**🚨
 
 <details><summary>See the JSON file</summary><p>
 
