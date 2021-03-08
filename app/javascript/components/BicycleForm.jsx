@@ -136,12 +136,12 @@ const BicycleForm = () => {
   return (
     <div className="container">
       <div className="row align-items-start mt-5 mb-5">
-        <div className="col-md-7">
+        <div className="col-lg-7 col-md-12">
           <div className="d-flex align-items-center mb-4">
             <img src={photo} className="bicycle-photo" />
           </div>
         </div>
-        <div className="col-md-5 order-form">
+        <div className="col-lg-5 col-md-12 order-form">
           <h2 className="mb-0">{name}</h2>
           {displayError ? (
             <div className="customized-error animate__animated animate__fadeIn">

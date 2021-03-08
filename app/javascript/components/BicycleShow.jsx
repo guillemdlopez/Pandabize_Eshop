@@ -38,10 +38,10 @@ const BicycleShow = () => {
   return (
     <div className="bicycle-show container mt-5">
       <div className="row align-items-center">
-        <div className="col-md-7">
+        <div className="col-lg-7 col-md-12  mb-4">
           <img src={bicycle?.photo} className="bicycle-photo" />
         </div>
-        <div className="col-md-5 bicycle-info">
+        <div className="col-lg-5 col-md-12 bicycle-info mb-5">
           <h2 className="bicycle-name">{bicycle?.name}</h2>
           <p className="text-muted bicycle-description">
             {bicycle?.description}

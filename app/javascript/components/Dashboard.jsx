@@ -23,10 +23,10 @@ const Dashboard = () => {
   return (
     <div className="container">
       <div className="row mt-5">
-        <div className="col-md-4">
+        <div className="col-lg-4 col-md-12 mb-4">
           <Sidebar {...currentUser} orders={userInfo.orders} />
         </div>
-        <div className="col-md-8">
+        <div className="col-lg-8 col-md-12">
           <OrdersList orders={userInfo.orders} />
         </div>
       </div>
