@@ -137,7 +137,7 @@ const BicycleForm = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container animate__animated animate__fadeIn">
       <div className="row align-items-start mt-5 mb-5">
         <div className="col-lg-7 col-md-12">
           <div className="d-flex align-items-center mb-4">

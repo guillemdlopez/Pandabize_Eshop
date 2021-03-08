@@ -18,7 +18,7 @@ const BicycleGrid = () => {
       </div>
 
       <div className="container">
-        <div className="cards mb-5 mt-4 ">
+        <div className="cards mb-5 mt-4 animate__animated animate__fadeIn">
           {data?.map((bicycle) => (
             <BicycleCard key={bicycle.id} {...bicycle} />
           ))}

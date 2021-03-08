@@ -36,9 +36,9 @@ const BicycleShow = () => {
   );
 
   return (
-    <div className="bicycle-show container mt-5">
+    <div className="bicycle-show container mt-5 animate__animated animate__fadeIn">
       <div className="row align-items-center">
-        <div className="col-lg-7 col-md-12  mb-4">
+        <div className="col-lg-7 col-md-12 mb-4">
           <img src={bicycle?.photo} className="bicycle-photo" />
         </div>
         <div className="col-lg-5 col-md-12 bicycle-info mb-5">
