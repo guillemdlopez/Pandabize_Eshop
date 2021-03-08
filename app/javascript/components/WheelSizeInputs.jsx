@@ -23,7 +23,7 @@ const WheelSizeInputs = ({
             name="wheelSize"
             onClick={(e) => {
               handleInputChange(e);
-              fetchAssociations(customization.id);
+              fetchAssociations(customization.id, e);
               setPrice(customization.price);
               setPriceWheel(customization.price);
               setPriceRim(0);

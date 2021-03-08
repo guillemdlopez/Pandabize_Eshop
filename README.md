@@ -58,6 +58,8 @@ Will give you back a JSON file with a list of all the bicycles available in the 
 
 ## Try it locally
 
+Sublime Text
+
 ```bash
 git clone git@github.com:guillemdlopez/Pandabize_Eshop.git
 cd Pandabize_Eshop
@@ -65,6 +67,8 @@ rm -rf .git
 yarn install
 stt # Open on Sublime Text
 ```
+
+VS Code
 
 ```bash
 git clone git@github.com:guillemdlopez/Pandabize_Eshop.git

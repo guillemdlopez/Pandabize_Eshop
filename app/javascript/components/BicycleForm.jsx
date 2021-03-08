@@ -6,7 +6,6 @@ import {
   API_ORDERS_URL,
 } from "../config/variables";
 import { userContext } from "../context/userContext";
-import useForm from "../hooks/useForm";
 import ModalOrder from "./ModalOrder";
 import RimColorInputs from "./RimColorInputs";
 import SaddleColorInputs from "./SaddleColorInputs";
@@ -30,11 +29,20 @@ const BicycleForm = () => {
   // retrieving available Customizations from the API
   const [availableCustomizations, setAvailableCustomizations] = useState([]);
 
-  const [formValues, handleInputChange, reset] = useForm({
+  const [formValues, setFormValues] = useState({
     wheelSize: "",
     rimColor: "",
     saddleColor: "",
   });
+  console.log(formValues);
+
+  const handleInputChange = ({ target }) => {
+    setFormValues({
+      ...formValues,
+      [target.name]: target.value,
+    });
+  };
+
   const { wheelSize, rimColor, saddleColor } = formValues;
 
   // be able to update the bicycle's price
@@ -68,7 +76,12 @@ const BicycleForm = () => {
       .then((data) => setBicycle(data));
   }, [bicycleId]);
 
-  const fetchAssociations = (id) => {
+  const fetchAssociations = (id, { target }) => {
+    setFormValues({
+      wheelSize: target.value,
+      rimColor: "",
+      saddleColor: "",
+    });
     setAvailableCustomizations([]);
     fetch(`${API_CUSTOMIZATIONS_URL}${id}`)
       .then((res) => res.json())
