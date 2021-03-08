@@ -1,4 +1,4 @@
-# Pandabize Web Store 🚲
+# Pandabize 🚲
 
 > Pandabize is a web application that allows the user to buy bicycles fast and easily unlike any other!
 
