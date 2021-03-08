@@ -22,6 +22,25 @@ The base url of the API is `http://pandabize-web-store.herokuapp.com`.
 
 🚨If you want to try it with Postman, please remember that **you need to be authenticated**🚨
 
+If you **do not** want to create you own account, but still want to try the app, you can log in with the following credentials:
+
+```
+Admin user:
+
+1. Email: guillemdelas@hotmail.com
+2. Password: password
+
+```
+
+🚨**This is an admin user. If you want to try it as a regular user, check the credentials below**🚨
+
+```
+Regular user:
+
+1. Email: amoralesrosa@gmail.com
+2. Password: password
+```
+
 ## Endpoints
 
 ### GET bicycles
