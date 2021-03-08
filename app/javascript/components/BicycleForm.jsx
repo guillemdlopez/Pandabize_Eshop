@@ -103,6 +103,7 @@ const BicycleForm = () => {
     e.preventDefault();
     if (isFormValid()) {
       const customs = [+wheelSize, +rimColor, +saddleColor];
+
       if (customs.includes(0)) {
         const ind = customs.findIndex((custom) => custom === 0);
         customs.splice(ind, 1);

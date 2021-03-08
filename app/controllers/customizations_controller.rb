@@ -9,13 +9,11 @@ class CustomizationsController < ApplicationController
         @customization = Customization.new(customization_params)
         authorize @customization
 
-        
-
         if @customization.save
             flash[:notice] = "New customizations have been added to #{@customization.bicycle.name}🎨"
             redirect_to root_path
         else
-            flash.now[:alert] = 'Something went wrong... Maybe you are adding an existing customization?'
+            flash.now[:alert] = 'Something went wrong... Perhaps the bicycle already contains that customization'
             render :new
         end
     end
