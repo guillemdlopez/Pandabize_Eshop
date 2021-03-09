@@ -235,7 +235,7 @@ Will give you back a JSON file with a list of all customizations available in th
 
 Will give you back a JSON file with information regarding a given customization. It contains the name of the customization (`Wheel size`), the value (`15 inches`) and the name of the bicycle it belongs to (along with the `bicycle_id`) and an array of all the associated customizations to that particular customization.
 
-🚨**Notice that you have to pass the `:id` of the customization as it is specified on the subtitle**🚨
+🚨**Notice that you have to pass the `:id` of the customization as it is specified above**🚨
 
 <details><summary>See the JSON file</summary><p>
 
@@ -344,7 +344,7 @@ Will give you back a JSON file with a list of all users who signed up to the app
 
 Will give you back the information of a unique user and an array with all his/her orders and the customizations that each one contains.
 
-🚨**Notice that you have to pass the `:id` of the user as it is specified on the subtitle**🚨
+🚨**Notice that you have to pass the `:id` of the user as it is specified above**🚨
 
 <details><summary>See the JSON file</summary><p>
 
@@ -438,7 +438,7 @@ Will give you back a JSON file with a list of all orders that users made. It con
 
 Will give you back a JSON file with a specific order along with a customizations array. This array contains all the customizations that the user chose. For instance, in the JSON below, the user chose a `Wheel size` of `16 inches` and a `Pink` `Saddle color`.
 
-🚨**Notice that you have to pass the `:id` of the order as it is specified on the subtitle**🚨
+🚨**Notice that you have to pass the `:id` of the order as it is specified above**🚨
 
 <details><summary>See the JSON file</summary><p>
 
