@@ -233,7 +233,7 @@ Will give you back a JSON file with a list of all customizations available in th
 
 #### `GET '/api/v1/customizations/:id'`
 
-Will give you back a JSON file with information regarding a given customization. It contains the name of the customization (`Wheel size`), the value (`15 inches`) and the name of the bicycle it belongs to (along with the `bicycle_id`) and an array of all the associated customizations to that particular customization.
+Will give you back a JSON file with information regarding a given customization. It contains the name of the customization (`Wheel size`), the value (`15 inches`), the name of the bicycle it belongs to (along with the `bicycle_id`) and an array of all the associated customizations to that particular customization.
 
 🚨**Notice that you have to pass the `:id` of the customization as it is specified above**🚨
 
