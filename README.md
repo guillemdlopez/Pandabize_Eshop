@@ -20,8 +20,6 @@ Content:
 
 ## User credentials
 
-🚨If you want to try it with Postman, please remember that **you need to be authenticated**🚨
-
 If you **do not** want to create you own account, but still want to try the app, you can log in with the following credentials:
 
 ```
@@ -44,6 +42,8 @@ Regular user:
 ## BASE URL
 
 The base url of the API is `http://pandabize-web-store.herokuapp.com`.
+
+🚨If you want to try it with Postman, please remember that **you need to be authenticated**🚨
 
 ## API Endpoints
 
@@ -107,7 +107,7 @@ Will give you back a JSON file with a list of all bicycles available in the appl
 
 Will give you back a JSON file with al the information regarding a given bicycle (including an array of all its customizations).
 
-🚨**Notice that you have to pass the `:id` of the bicycle as it is specified above**🚨
+🚨Notice that you have to pass the `:id` of the bicycle as it is specified above🚨
 
 <details><summary>See the JSON file</summary><p>
 
@@ -235,7 +235,7 @@ Will give you back a JSON file with a list of all customizations available in th
 
 Will give you back a JSON file with information regarding a given customization. It contains the name of the customization (`Wheel size`), the value (`15 inches`), the name of the bicycle it belongs to (along with the `bicycle_id`) and an array of all the associated customizations to that particular customization.
 
-🚨**Notice that you have to pass the `:id` of the customization as it is specified above**🚨
+🚨Notice that you have to pass the `:id` of the customization as it is specified above🚨
 
 <details><summary>See the JSON file</summary><p>
 
@@ -344,7 +344,7 @@ Will give you back a JSON file with a list of all users who signed up to the app
 
 Will give you back the information of a unique user and an array with all his/her orders and the customizations that each one contains.
 
-🚨**Notice that you have to pass the `:id` of the user as it is specified above**🚨
+🚨Notice that you have to pass the `:id` of the user as it is specified above🚨
 
 <details><summary>See the JSON file</summary><p>
 
@@ -438,7 +438,7 @@ Will give you back a JSON file with a list of all orders that users made. It con
 
 Will give you back a JSON file with a specific order along with a customizations array. This array contains all the customizations that the user chose. For instance, in the JSON below, the user chose a `Wheel size` of `16 inches` and a `Pink` `Saddle color`.
 
-🚨**Notice that you have to pass the `:id` of the order as it is specified above**🚨
+🚨Notice that you have to pass the `:id` of the order as it is specified above🚨
 
 <details><summary>See the JSON file</summary><p>
 
