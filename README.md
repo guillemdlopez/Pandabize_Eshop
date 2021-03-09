@@ -533,5 +533,5 @@ git clone git@github.com:guillemdlopez/Pandabize_Eshop.git
 cd Pandabize_Eshop
 rm -rf .git
 yarn install
-stt # Open on VS Code
+code . # Open on VS Code
 ```
