@@ -43,7 +43,7 @@ Regular user:
 
 The base url of the API is `http://pandabize-web-store.herokuapp.com`.
 
-🚨If you want to try it with Postman, please remember that **you need to be authenticated**🚨
+🚨If you want to try it on Postman, please remember that **you need to be authenticated**🚨
 
 ## API Endpoints
 
