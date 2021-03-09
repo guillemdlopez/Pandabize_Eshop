@@ -6,7 +6,7 @@ Content:
 
 - [BASE URL](#BASE-URL)
 - [User credentials](#user-credentials)
-- [API Enpoints](#endpoints)
+- [API Enpoints](#api-endpoints)
 - [GET bicycles](#get-bicycles)
 - [GET bicycle](#get-bicycle)
 - [GET customizations](#get-customizations)
