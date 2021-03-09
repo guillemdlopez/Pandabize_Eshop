@@ -107,7 +107,7 @@ Will give you back a JSON file with a list of all bicycles available in the appl
 
 Will give you back a JSON file with al the information regarding a given bicycle (including an array of all its customizations).
 
-🚨**You need to pass the `:id` of the bicycle you are insterested in**🚨
+🚨**Notice that you have to pass the `:id` of the bicycle as it is specified above**🚨
 
 <details><summary>See the JSON file</summary><p>
 
