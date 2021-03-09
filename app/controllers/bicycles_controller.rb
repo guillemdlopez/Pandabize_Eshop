@@ -1,5 +1,4 @@
 class BicyclesController < ApplicationController
-    before_action :set_bicycle, only: [:show]
 
     def new
         @bicycle = Bicycle.new()
@@ -18,21 +17,9 @@ class BicyclesController < ApplicationController
         end
     end
 
-    def show
-        render json: {
-            bicycle: @bicycle,
-            customizations: @bicycle.customizations,
-        }
-    end
-
     private
 
     def bicycle_params
         params.require(:bicycle).permit(:name, :description, :photo)
-    end
-
-    def set_bicycle
-        @bicycle = Bicycle.find(params[:id])
-        authorize @bicycle
     end
 end
