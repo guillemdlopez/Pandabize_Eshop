@@ -7,7 +7,6 @@ const RimColorInputs = ({
   handleInputChange,
   setPrice,
   setPriceRim,
-  priceRim,
   price,
   setErrorMsg,
   displayError,

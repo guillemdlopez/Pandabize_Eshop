@@ -7,8 +7,6 @@ const WheelSizeInputs = ({
   fetchAssociations,
   setPrice,
   setPriceWheel,
-  setPriceRim,
-  setPriceSaddle,
 }) => {
   return (
     <ul className="block-list-center">
@@ -26,8 +24,6 @@ const WheelSizeInputs = ({
               fetchAssociations(customization.id, e);
               setPrice(customization.price);
               setPriceWheel(customization.price);
-              setPriceRim(0);
-              setPriceSaddle(0);
             }}
             value={customization.id}
             className="ml-2"
@@ -42,9 +38,7 @@ WheelSizeInputs.propTypes = {
   wheelSizes: PropTypes.array,
   handleInputChange: PropTypes.func.isRequired,
   fetchAssociations: PropTypes.func.isRequired,
-  setPrice: PropTypes.func.isRequired,
-  setPriceRim: PropTypes.func.isRequired,
-  setPriceSaddle: PropTypes.func.isRequired,
+  setPriceWheel: PropTypes.func.isRequired,
 };
 
 export default WheelSizeInputs;

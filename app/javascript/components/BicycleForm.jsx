@@ -88,6 +88,9 @@ const BicycleForm = () => {
       rimColor: "",
       saddleColor: "",
     });
+    setPriceRim(0);
+    setPriceSaddle(0);
+
     setAvailableCustomizations([]);
     fetch(`${API_CUSTOMIZATIONS_URL}${id}`)
       .then((res) => {
@@ -163,7 +166,7 @@ const BicycleForm = () => {
       setErrorMsg({ displayError: false, errorMsgContent: "" });
       setSuccessMsg({
         displaySuccess: true,
-        successMsgContent: "your order has been succesfully done!",
+        successMsgContent: "your order has been succesfully completed!",
       });
     }
   };

@@ -3,15 +3,7 @@ import PropTypes from "prop-types";
 import { useHistory } from "react-router-dom";
 import { userContext } from "../context/userContext";
 
-const ModalOrder = ({
-  content,
-  name,
-  photo,
-  price,
-  setSuccessMsg,
-  successMsg,
-  displaySuccess,
-}) => {
+const ModalOrder = ({ content, name, photo, price }) => {
   const { user } = useContext(userContext);
   const history = useHistory();
 
@@ -63,9 +55,6 @@ ModalOrder.propTypes = {
   name: PropTypes.string.isRequired,
   photo: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  setSuccessMsg: PropTypes.func.isRequired,
-  successMsg: PropTypes.object.isRequired,
-  displaySuccess: PropTypes.bool.isRequired,
 };
 
 export default ModalOrder;
