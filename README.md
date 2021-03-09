@@ -4,8 +4,8 @@
 
 Content:
 
-- [BASE URL](#BASE-URL)
 - [User credentials](#user-credentials)
+- [BASE URL](#BASE-URL)
 - [API Enpoints](#api-endpoints)
 - [GET bicycles](#get-bicycles)
 - [GET bicycle](#get-bicycle)
@@ -17,10 +17,6 @@ Content:
 - [GET order](#get-order)
 - [POST order](#post-order)
 - [Get Started](#try-it-locally)
-
-## BASE URL
-
-The base url of the API is `http://pandabize-web-store.herokuapp.com`.
 
 ## User credentials
 
@@ -44,6 +40,10 @@ Regular user:
 1. Email: amoralesrosa@gmail.com
 2. Password: password
 ```
+
+## BASE URL
+
+The base url of the API is `http://pandabize-web-store.herokuapp.com`.
 
 ## API Endpoints
 
