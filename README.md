@@ -6,7 +6,7 @@ Content:
 
 - [BASE URL](#BASE-URL)
 - [User credentials](#user-credentials)
-- [Enpoints](#endpoints)
+- [API Enpoints](#endpoints)
 - [GET bicycles](#get-bicycles)
 - [GET bicycle](#get-bicycle)
 - [GET customizations](#get-customizations)
@@ -45,7 +45,7 @@ Regular user:
 2. Password: password
 ```
 
-## Endpoints
+## API Endpoints
 
 ### GET bicycles
 
