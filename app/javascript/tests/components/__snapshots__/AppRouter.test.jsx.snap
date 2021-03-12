@@ -14,7 +14,7 @@ exports[`Testing the <AppRouter/> component should render it correctly 1`] = `
         >
           Welcome back, 
           <strong>
-             
+            Guillem
           </strong>
         </h1>
       </div>
@@ -23,7 +23,7 @@ exports[`Testing the <AppRouter/> component should render it correctly 1`] = `
       className="container"
     >
       <div
-        className="cards mb-5 mt-4 "
+        className="cards mb-5 mt-4 animate__animated animate__fadeIn"
       />
     </div>,
   ]

@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the <BicycleCard /> component should render it correctly 1`] = `
+<a
+  href="/bicycle/26"
+  onClick={[Function]}
+>
+  <div
+    className="bike-card"
+    data-bike-id={26}
+  >
+    <img
+      className="bike-img"
+      src="image.jpg"
+    />
+    <div
+      className="bike-card-content"
+    >
+      <p
+        className="bicycle-name"
+      >
+        <strong>
+          Prettiest Bicycle
+        </strong>
+      </p>
+      <p
+        className="bicycle-description text-black-50"
+      >
+        This is the prettiest bicycle in the wor
+        ...
+      </p>
+      <div
+        className="d-flex mb-3"
+      />
+      <div
+        className="d-flex align-items-center"
+      >
+        <p
+          className="text-muted mb-0"
+        >
+          from
+        </p>
+        <p
+          className="ml-2 lowest-price mb-0"
+        >
+          6.15
+           €
+        </p>
+      </div>
+    </div>
+  </div>
+</a>
+`;

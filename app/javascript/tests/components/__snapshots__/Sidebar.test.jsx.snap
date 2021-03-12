@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the <Sidebar/> component should render the component correctly 1`] = `
+<div
+  className="sidebar d-flex align-items-center"
+>
+  <img
+    className="avatar-md"
+    src="avatar.jpg"
+  />
+  <div
+    className="user-info"
+  >
+    <ul
+      className="sidebar-list ml-3"
+    >
+      <li
+        className="full_name-item"
+      >
+        <strong>
+          Full Name: 
+        </strong>
+        Guillem Delás
+      </li>
+      <li
+        className="orders-item"
+      >
+        <strong>
+          Orders:
+        </strong>
+         
+        1
+      </li>
+      <li>
+        <button
+          className="btn btn-outline-success btn-sm"
+          onClick={[Function]}
+        >
+          Continue shopping
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

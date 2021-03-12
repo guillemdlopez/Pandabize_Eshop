@@ -3,6 +3,8 @@ import { Link, useParams } from "react-router-dom";
 import { API_BICYCLES_URL } from "../fixtures/variables";
 import _ from "lodash";
 import { backgroundColor } from "../fixtures/functions";
+import fetch from "node-fetch";
+import { server } from "../config";
 
 const BicycleShow = () => {
   const [bicycle, setBicycle] = useState();
@@ -21,11 +23,13 @@ const BicycleShow = () => {
 
       setBicycle(data);
     } catch (error) {
-      console.error(error);
+      // console.error(error);
     }
   };
 
-  useMemo(() => getBicycle(`${API_BICYCLES_URL}${bicycleId}`), [bicycleId]);
+  useMemo(() => getBicycle(`${server}${API_BICYCLES_URL}${bicycleId}`), [
+    bicycleId,
+  ]);
 
   const wheelSize = bicycle?.customizations.filter(
     (custom) => custom.name === "Wheel size"
@@ -36,6 +40,10 @@ const BicycleShow = () => {
   const saddleColor = bicycle?.customizations.filter(
     (custom) => custom.name === "Saddle color"
   );
+
+  const displayColorName = ({ target }) => {
+    console.log(target.dataset.color);
+  };
 
   return (
     <div className="bicycle-show container mt-5 animate__animated animate__fadeIn">
@@ -84,6 +92,7 @@ const BicycleShow = () => {
                   className="color-value mr-2"
                   style={backgroundColor(color.value)}
                   data-color={color.value}
+                  onMouseEnter={displayColorName}
                   key={color.id}
                 ></div>
               );
@@ -105,6 +114,7 @@ const BicycleShow = () => {
                   className="color-value mr-2"
                   style={backgroundColor(color.value)}
                   data-color={color.value}
+                  onMouseEnter={displayColorName}
                   key={color.id}
                 ></div>
               );

@@ -1,5 +1,6 @@
 import React from "react";
 import OrderCard from "./OrderCard";
+import PropTypes from "prop-types";
 
 const OrdersList = ({ orders }) => {
   return (
@@ -9,6 +10,10 @@ const OrdersList = ({ orders }) => {
       })}
     </>
   );
+};
+
+OrdersList.propTypes = {
+  orders: PropTypes.array,
 };
 
 export default OrdersList;

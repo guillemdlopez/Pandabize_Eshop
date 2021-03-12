@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router";
+import PropTypes from "prop-types";
 
 const Sidebar = ({ avatar, first_name, last_name, orders }) => {
   const history = useHistory();
@@ -12,12 +13,12 @@ const Sidebar = ({ avatar, first_name, last_name, orders }) => {
       <img src={avatar} className="avatar-md" />
       <div className="user-info">
         <ul className="sidebar-list ml-3">
-          <li>
+          <li className="full_name-item">
             <strong>Full Name: </strong>
             {`${first_name} ${last_name}`}
           </li>
-          <li>
-            <strong>Orders: </strong> {orders?.length}
+          <li className="orders-item">
+            <strong>Orders:</strong> {orders?.length}
           </li>
           <li>
             <button
@@ -31,6 +32,13 @@ const Sidebar = ({ avatar, first_name, last_name, orders }) => {
       </div>
     </div>
   );
+};
+
+Sidebar.propTypes = {
+  avatar: PropTypes.string,
+  first_name: PropTypes.string,
+  last_name: PropTypes.string,
+  orders: PropTypes.array,
 };
 
 export default Sidebar;

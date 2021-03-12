@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the <BicycleGrid/> component should render component correctly 1`] = `
+Array [
+  <div
+    className="banner"
+  >
+    <div
+      className="container"
+    >
+      <h1
+        className="banner-greeting"
+      >
+        Welcome back, 
+        <strong>
+          Guillem
+        </strong>
+      </h1>
+    </div>
+  </div>,
+  <div
+    className="container"
+  >
+    <div
+      className="cards mb-5 mt-4 animate__animated animate__fadeIn"
+    >
+      <a
+        href="/bicycle/1"
+        onClick={[Function]}
+      >
+        <div
+          className="bike-card"
+          data-bike-id={1}
+        >
+          <img
+            className="bike-img"
+            src="image.jpg"
+          />
+          <div
+            className="bike-card-content"
+          >
+            <p
+              className="bicycle-name"
+            >
+              <strong>
+                Prettiest Bicycle
+              </strong>
+            </p>
+            <p
+              className="bicycle-description text-black-50"
+            >
+              This is the prettiest bicycle in the wor
+              ...
+            </p>
+            <div
+              className="d-flex mb-3"
+            />
+            <div
+              className="d-flex align-items-center"
+            >
+              <p
+                className="text-muted mb-0"
+              >
+                from
+              </p>
+              <p
+                className="ml-2 lowest-price mb-0"
+              >
+                6.15
+                 €
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a
+        href="/bicycle/2"
+        onClick={[Function]}
+      >
+        <div
+          className="bike-card"
+          data-bike-id={2}
+        >
+          <img
+            className="bike-img"
+            src="image-2.jpg"
+          />
+          <div
+            className="bike-card-content"
+          >
+            <p
+              className="bicycle-name"
+            >
+              <strong>
+                Coolest Bicycle
+              </strong>
+            </p>
+            <p
+              className="bicycle-description text-black-50"
+            >
+              This is the coolest bicycle in the world
+              ...
+            </p>
+            <div
+              className="d-flex mb-3"
+            />
+            <div
+              className="d-flex align-items-center"
+            >
+              <p
+                className="text-muted mb-0"
+              >
+                from
+              </p>
+              <p
+                className="ml-2 lowest-price mb-0"
+              >
+                5.15
+                 €
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>,
+]
+`;

@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the <Dashboard/> component should render the component correctly 1`] = `
+<div
+  className="container animate__animated animate__fadeIn"
+>
+  <div
+    className="row mt-5"
+  >
+    <div
+      className="col-lg-5 col-md-12 mb-4"
+    >
+      <div
+        className="sidebar d-flex align-items-center"
+      >
+        <img
+          className="avatar-md"
+        />
+        <div
+          className="user-info"
+        >
+          <ul
+            className="sidebar-list ml-3"
+          >
+            <li
+              className="full_name-item"
+            >
+              <strong>
+                Full Name: 
+              </strong>
+              undefined undefined
+            </li>
+            <li
+              className="orders-item"
+            >
+              <strong>
+                Orders:
+              </strong>
+               
+            </li>
+            <li>
+              <button
+                className="btn btn-outline-success btn-sm"
+                onClick={[Function]}
+              >
+                Continue shopping
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-lg-7 col-md-12"
+    />
+  </div>
+</div>
+`;

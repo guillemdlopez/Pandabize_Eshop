@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the <OrderCard /> component should render the component correctly 1`] = `
+<div
+  className="order-card order-card-dashboard"
+>
+  <img
+    className="dashboard-card-img"
+    src="http://res.cloudinary.com/doker55/image/upload/jbwjj6i6r1f2oz551vxojkmtb42c.jpg"
+  />
+  <div
+    className="dashboard-card-content"
+  >
+    <ul
+      className="block-list-left ml-3 mb-0"
+    >
+      <li>
+        <strong>
+          Bicycle:
+        </strong>
+         
+        New School XC
+      </li>
+      <li>
+        <strong>
+          Amount:
+        </strong>
+         
+        13.1
+         €
+      </li>
+      <li
+        className="custom-item mt-2"
+        key="148"
+      >
+        <strong>
+          Wheel size
+          :
+        </strong>
+         
+        16 inches
+      </li>
+      <li
+        className="custom-item mt-2"
+        key="168"
+      >
+        <strong>
+          Rim color
+          :
+        </strong>
+         
+        Blue
+      </li>
+    </ul>
+  </div>
+</div>
+`;

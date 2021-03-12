@@ -2,9 +2,11 @@ import React, { useContext } from "react";
 import useFetch from "../hooks/useFetch";
 import BicycleCard from "./BicycleCard";
 import { userContext } from "../context/userContext";
+import { server } from "../config";
+import { API_BICYCLES_URL } from "../fixtures/variables";
 
 const BicycleGrid = () => {
-  const { data, loading, error } = useFetch("/api/v1/bicycles");
+  const { data, loading, error } = useFetch(`${server}${API_BICYCLES_URL}`);
 
   const { user } = useContext(userContext);
   return (
@@ -12,7 +14,7 @@ const BicycleGrid = () => {
       <div className="banner">
         <div className="container">
           <h1 className="banner-greeting">
-            Welcome back, <strong> {user}</strong>
+            Welcome back, <strong>{user}</strong>
           </h1>
         </div>
       </div>

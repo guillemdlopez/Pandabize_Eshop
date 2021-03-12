@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const OrderCard = ({ customizations, bicycle, photo, amount }) => {
   return (
@@ -23,6 +24,13 @@ const OrderCard = ({ customizations, bicycle, photo, amount }) => {
       </div>
     </div>
   );
+};
+
+OrderCard.propTypes = {
+  customizations: PropTypes.array.isRequired,
+  bicycle: PropTypes.string.isRequired,
+  photo: PropTypes.string.isRequired,
+  amount: PropTypes.number.isRequired,
 };
 
 export default OrderCard;

@@ -14,12 +14,12 @@ const BicycleCard = ({ id, name, description, photo, customizations }) => {
       <div className="bike-card" data-bike-id={id}>
         <img src={photo} className="bike-img" />
         <div className="bike-card-content">
-          <p>
+          <p className="bicycle-name">
             <strong>{name}</strong>
           </p>
-          <p className="text-black-50">
+          <p className="bicycle-description text-black-50">
             {description.slice(0, 40)}
-            {description.length > 30 ? "..." : ""}
+            {description.length > 40 ? "..." : ""}
           </p>
           <div className="d-flex mb-3">
             {customizations.map((custom) =>

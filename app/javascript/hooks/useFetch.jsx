@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import fetch from "node-fetch";
 
 const useFetch = (url) => {
   const isMounted = useRef(true);
@@ -35,7 +36,7 @@ const useFetch = (url) => {
         }
       })
       .catch((err) => {
-        console.error(err);
+        // console.error(err);
       });
   }, [url]);
 

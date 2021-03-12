@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing <BicycleForm/> component should render it correctly 1`] = `
+<div
+  className="container animate__animated animate__fadeIn"
+>
+  <div
+    className="row align-items-start mt-5 mb-5"
+  >
+    <div
+      className="col-lg-7 col-md-12 mb-4"
+    >
+      <img
+        className="bicycle-photo"
+      />
+    </div>
+    <div
+      className="col-lg-5 col-md-12 order-form"
+    >
+      <h2
+        className="mb-0"
+      />
+      <form
+        onSubmit={[Function]}
+      >
+        <ul
+          className="block-list-center"
+        />
+        <div
+          className="block-list-center"
+          id="custom-associations"
+        />
+        <div
+          className="block-list"
+          id="custom-associations"
+        />
+        <hr />
+        <ul
+          className="block-list-left"
+        >
+          <li>
+            <strong
+              className="text-muted"
+            >
+              Wheel size: 
+            </strong>
+            0
+             €
+          </li>
+          <li>
+            <strong
+              className="text-muted"
+            >
+              Rim color: 
+            </strong>
+            0
+             €
+          </li>
+          <li>
+            <strong
+              className="text-muted"
+            >
+              Saddle color: 
+            </strong>
+            0
+             €
+          </li>
+          <li
+            className="mt-4"
+          >
+            <strong
+              className="text-muted"
+            >
+              TOTAL:
+            </strong>
+            <span
+              className="price-tag"
+            >
+               
+              0.00
+               €
+            </span>
+          </li>
+        </ul>
+        <button
+          className="btn btn-success btn-block mb-4"
+          id="btn-form"
+          type="submit"
+        >
+          Buy
+        </button>
+      </form>
+      <button
+        className="btn-customized"
+        onClick={[Function]}
+      >
+        Go back
+      </button>
+    </div>
+  </div>
+</div>
+`;

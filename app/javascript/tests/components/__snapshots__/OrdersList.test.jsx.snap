@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the <OrderList /> component should render the component correctly 1`] = `
+<Fragment>
+  <OrderCard
+    amount={14.26}
+    bicycle="Fast and Furious 5000"
+    bicycle_id={28}
+    customizations={
+      Array [
+        Object {
+          "bicycle_id": 28,
+          "id": 154,
+          "name": "Wheel size",
+          "price": 6.28,
+          "value": "15 inches",
+        },
+        Object {
+          "bicycle_id": 28,
+          "id": 196,
+          "name": "Saddle color",
+          "price": 7.98,
+          "value": "Blue",
+        },
+      ]
+    }
+    id={20}
+    key="20"
+    photo="http://res.cloudinary.com/doker55/image/upload/fj7x3ykjgk56nxonx42wqd67l3il.jpg"
+    user_id={10}
+  />
+  <OrderCard
+    amount={13.1}
+    bicycle="New School XC"
+    bicycle_id={26}
+    customizations={
+      Array [
+        Object {
+          "bicycle_id": 26,
+          "id": 148,
+          "name": "Wheel size",
+          "price": 6.15,
+          "value": "16 inches",
+        },
+        Object {
+          "bicycle_id": 26,
+          "id": 168,
+          "name": "Rim color",
+          "price": 6.95,
+          "value": "Blue",
+        },
+      ]
+    }
+    id={19}
+    key="19"
+    photo="http://res.cloudinary.com/doker55/image/upload/jbwjj6i6r1f2oz551vxojkmtb42c.jpg"
+    user_id={10}
+  />
+</Fragment>
+`;

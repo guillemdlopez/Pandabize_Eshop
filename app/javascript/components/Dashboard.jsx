@@ -4,6 +4,8 @@ import Sidebar from "./Sidebar";
 
 import { API_USERS_URL } from "../fixtures/variables";
 import { userContext } from "../context/userContext";
+import { server } from "../config";
+import fetch from "node-fetch";
 
 const Dashboard = () => {
   const [userInfo, setUserInfo] = useState({});
@@ -12,7 +14,7 @@ const Dashboard = () => {
 
   const getUserInfo = async () => {
     try {
-      const getJSON = await fetch(`${API_USERS_URL}${userId}`);
+      const getJSON = await fetch(`${server}${API_USERS_URL}${userId}`);
       if (!getJSON.ok) throw new Error(`Problem getting location data`);
 
       const res = await getJSON;
@@ -24,16 +26,17 @@ const Dashboard = () => {
       console.error(err);
     }
   };
-  useMemo(() => getUserInfo(userId), [userId]);
+  useMemo(() => getUserInfo(), [userId]);
+
   const currentUser = userInfo?.user;
 
   return (
     <div className="container animate__animated animate__fadeIn">
       <div className="row mt-5">
-        <div className="col-lg-4 col-md-12 mb-4">
+        <div className="col-lg-5 col-md-12 mb-4">
           <Sidebar {...currentUser} orders={userInfo.orders} />
         </div>
-        <div className="col-lg-8 col-md-12">
+        <div className="col-lg-7 col-md-12">
           <OrdersList orders={userInfo.orders} />
         </div>
       </div>

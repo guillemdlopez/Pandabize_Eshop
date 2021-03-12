@@ -11,6 +11,8 @@ import ModalOrder from "./ModalOrder";
 import RimColorInputs from "./RimColorInputs";
 import SaddleColorInputs from "./SaddleColorInputs";
 import WheelSizeInputs from "./WheelSizeInputs";
+import fetch from "node-fetch";
+import { server } from "../config";
 
 const BicycleForm = () => {
   // we able to navigate and to get the bicycleId from the url params
@@ -66,7 +68,7 @@ const BicycleForm = () => {
   };
 
   useEffect(() => {
-    fetch(`${API_BICYCLES_URL}${bicycleId}`)
+    fetch(`${server}${API_BICYCLES_URL}${bicycleId}`)
       .then((res) => {
         if (!res.ok) throw new Error(`Bicycle not found ${res.status}`);
 
@@ -92,7 +94,7 @@ const BicycleForm = () => {
     setPriceSaddle(0);
 
     setAvailableCustomizations([]);
-    fetch(`${API_CUSTOMIZATIONS_URL}${id}`)
+    fetch(`${server}${API_CUSTOMIZATIONS_URL}${id}`)
       .then((res) => {
         if (!res.ok) throw new Error(`Customizations not found ${res.status}`);
 
@@ -148,7 +150,7 @@ const BicycleForm = () => {
 
       const roundedPrice = price.toFixed(2);
 
-      fetch(`${API_ORDERS_URL}`, {
+      fetch(`${server}${API_ORDERS_URL}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
