@@ -11,11 +11,7 @@ import ModalOrder from "./ModalOrder";
 import RimColorInputs from "./RimColorInputs";
 import SaddleColorInputs from "./SaddleColorInputs";
 import WheelSizeInputs from "./WheelSizeInputs";
-
-if (process.env.NODE_ENV !== "production") {
-  import fetch from "node-fetch";
-}
-
+import fetch from "node-fetch";
 import { server } from "../config";
 
 const BicycleForm = () => {
