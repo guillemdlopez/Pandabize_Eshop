@@ -24,7 +24,7 @@ const Dashboard = () => {
       console.error(err);
     }
   };
-  useMemo(() => getUserInfo(userId), [userId]);
+  useMemo(() => getUserInfo(), [userId]);
   const currentUser = userInfo?.user;
 
   return (
