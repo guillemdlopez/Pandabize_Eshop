@@ -3,7 +3,9 @@ import { Link, useParams } from "react-router-dom";
 import { API_BICYCLES_URL } from "../fixtures/variables";
 import _ from "lodash";
 import { backgroundColor } from "../fixtures/functions";
-import fetch from "node-fetch";
+if (process.env.NODE_ENV !== "production") {
+  import fetch from "node-fetch";
+}
 import { server } from "../config";
 
 const BicycleShow = () => {

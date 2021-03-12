@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import fetch from "node-fetch";
+if (process.env.NODE_ENV !== "production") {
+  import fetch from "node-fetch";
+}
 
 const useFetch = (url) => {
   const isMounted = useRef(true);

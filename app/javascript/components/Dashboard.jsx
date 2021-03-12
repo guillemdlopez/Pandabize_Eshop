@@ -5,7 +5,9 @@ import Sidebar from "./Sidebar";
 import { API_USERS_URL } from "../fixtures/variables";
 import { userContext } from "../context/userContext";
 import { server } from "../config";
-import fetch from "node-fetch";
+if (process.env.NODE_ENV !== "production") {
+  import fetch from "node-fetch";
+}
 
 const Dashboard = () => {
   const [userInfo, setUserInfo] = useState({});
