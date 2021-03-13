@@ -3,8 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { API_BICYCLES_URL } from "../fixtures/variables";
 import _ from "lodash";
 import { backgroundColor } from "../fixtures/functions";
-import fetch from "node-fetch";
-import { server } from "../config";
+import { server } from "../fixtures/config";
 
 const BicycleShow = () => {
   const [bicycle, setBicycle] = useState();

@@ -45,6 +45,6 @@ describe("Testing <BicycleForm/> component", () => {
   });
 
   test("should ", () => {
-    console.log(wrapper.debug());
+    // console.log(wrapper.debug());
   });
 });

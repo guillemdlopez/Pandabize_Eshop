@@ -4,8 +4,7 @@ import Sidebar from "./Sidebar";
 
 import { API_USERS_URL } from "../fixtures/variables";
 import { userContext } from "../context/userContext";
-import { server } from "../config";
-import fetch from "node-fetch";
+import { server } from "../fixtures/config";
 
 const Dashboard = () => {
   const [userInfo, setUserInfo] = useState({});

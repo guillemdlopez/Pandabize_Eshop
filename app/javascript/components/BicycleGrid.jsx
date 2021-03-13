@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import useFetch from "../hooks/useFetch";
 import BicycleCard from "./BicycleCard";
 import { userContext } from "../context/userContext";
-import { server } from "../config";
 import { API_BICYCLES_URL } from "../fixtures/variables";
+import { server } from "../fixtures/config";
 
 const BicycleGrid = () => {
   const { data, loading, error } = useFetch(`${server}${API_BICYCLES_URL}`);
