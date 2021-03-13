@@ -1,6 +1,8 @@
 import { shallow } from "enzyme";
 import React from "react";
 import WheelSizeInputs from "../../components/WheelSizeInputs";
+import useForm from "../../hooks/useForm";
+jest.mock("../../hooks/useForm");
 
 describe("Testing the <WheelSizeInputs/> component", () => {
   const wheelSizeInputsProps = {
@@ -29,6 +31,7 @@ describe("Testing the <WheelSizeInputs/> component", () => {
     ],
     handleInputChange: jest.fn(),
     fetchAssociations: jest.fn(),
+    setPrice: jest.fn(),
     setPriceWheel: jest.fn(),
   };
   const wrapper = shallow(<WheelSizeInputs {...wheelSizeInputsProps} />);

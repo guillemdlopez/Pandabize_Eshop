@@ -40,10 +40,6 @@ const BicycleShow = () => {
     (custom) => custom.name === "Saddle color"
   );
 
-  const displayColorName = ({ target }) => {
-    console.log(target.dataset.color);
-  };
-
   return (
     <div className="bicycle-show container mt-5 animate__animated animate__fadeIn">
       <div className="row align-items-center">
@@ -91,7 +87,6 @@ const BicycleShow = () => {
                   className="color-value mr-2"
                   style={backgroundColor(color.value)}
                   data-color={color.value}
-                  onMouseEnter={displayColorName}
                   key={color.id}
                 ></div>
               );
@@ -113,7 +108,6 @@ const BicycleShow = () => {
                   className="color-value mr-2"
                   style={backgroundColor(color.value)}
                   data-color={color.value}
-                  onMouseEnter={displayColorName}
                   key={color.id}
                 ></div>
               );

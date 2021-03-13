@@ -13,7 +13,7 @@ describe("Testing the <BicycleGrid/> component", () => {
     userId: 1,
   };
 
-  const bicycles = useFetch.mockReturnValue({
+  useFetch.mockReturnValue({
     data: [
       {
         id: 1,
@@ -79,6 +79,7 @@ describe("Testing the <BicycleGrid/> component", () => {
   test("should display a greeting message to the current user", () => {
     const { user } = userInfo;
     expect(wrapper.find("h1").text().trim()).toBe(`Welcome back, ${user}`);
+    expect(wrapper.find("h1").text().trim()).not.toBe(`Welcome back, Antonio`);
   });
 
   test("should contain a banner", () => {

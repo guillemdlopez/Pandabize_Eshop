@@ -4,7 +4,7 @@ import { API_BICYCLES_URL } from "../../fixtures/variables";
 import useFetch from "../../hooks/useFetch";
 
 describe("Testing the custom hook useFetch", () => {
-  test("should return some data", () => {
+  test("should return default values", () => {
     const { result } = renderHook(() =>
       useFetch(`${server}${API_BICYCLES_URL}`)
     );

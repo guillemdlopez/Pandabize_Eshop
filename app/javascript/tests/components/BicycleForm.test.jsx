@@ -8,15 +8,14 @@ import {
 import BicycleForm from "../../components/BicycleForm";
 import { userContext } from "../../context/userContext";
 
-// jest.mock("../../hooks/useForm");
+const mockHistoryPush = jest.fn();
+
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),
+  useHistory: () => ({
+    goBack: mockHistoryPush,
+  }),
   useParams: () => ({ bicycleId: 26 }),
-}));
-
-jest.mock("react", () => ({
-  ...jest.requireActual("react"),
-  useEffect: () => ({ bicycleId: 26 }),
 }));
 
 describe("Testing <BicycleForm/> component", () => {
@@ -44,7 +43,10 @@ describe("Testing <BicycleForm/> component", () => {
     expect(wrapper.find("form").exists()).toBe(true);
   });
 
-  test("should ", () => {
-    // console.log(wrapper.debug());
+  test("should redirect to the BicycleShow if the user clicks on the Go Back button", () => {
+    const btnGoBack = wrapper.find(".btn-customized");
+    btnGoBack.simulate("click");
+
+    expect(mockHistoryPush).toHaveBeenCalledTimes(1);
   });
 });

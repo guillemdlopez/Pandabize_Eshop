@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the component <ModalOrder/> should render the component correctly 1`] = `
+<div
+  className="modal-order animate__animated animate__fadeIn"
+>
+  <div
+    className="text-center"
+  >
+    <i
+      className="far fa-check-circle fa-5x mb-3 text-success text-center"
+    />
+    <p
+      className="mb-4"
+    >
+      <strong>
+        Guillem
+      </strong>
+      , 
+      your order has been succesfully completed!
+    </p>
+  </div>
+  <div
+    className="order-card d-flex align-items-center"
+  >
+    <img
+      className="order-card-img"
+      src="img.jpg"
+    />
+    <div
+      className="order-card-content ml-4"
+    >
+      <ul
+        className="block-list-left mb-0"
+      >
+        <li
+          className="mb-0"
+        >
+          <strong>
+            Bicycle:
+          </strong>
+           
+          Black Panther 5000
+        </li>
+        <li
+          className="mb-0"
+        >
+          <strong>
+            Price:
+          </strong>
+           
+          <span
+            className="price-tag"
+          >
+            25.00
+             €
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <button
+    className="btn btn-success btn-block mt-5"
+    onClick={[Function]}
+  >
+    Go to dashboard
+  </button>
+  <button
+    className="btn-customized"
+    onClick={[Function]}
+  >
+    Home
+  </button>
+</div>
+`;

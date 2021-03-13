@@ -35,7 +35,11 @@ const useFetch = (url) => {
         }
       })
       .catch((err) => {
-        // console.error(err);
+        setState({
+          data: null,
+          loading: false,
+          error: `${err}`,
+        });
       });
   }, [url]);
 

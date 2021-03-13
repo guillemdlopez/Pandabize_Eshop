@@ -122,8 +122,7 @@ const BicycleForm = () => {
     if (arr[1] === "" && arr[2] === "") {
       setErrorMsg({
         displayError: true,
-        errorMsgContent:
-          "Your have to select a Rim color and/or a Saddle Color",
+        errorMsgContent: "You have to select a Rim color and/or a Saddle Color",
       });
       return false;
     }
