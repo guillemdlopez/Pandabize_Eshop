@@ -43,4 +43,8 @@ describe("Testing <BicycleForm/> component", () => {
   test("should contain a form to purchase a bicycle with its customizations", () => {
     expect(wrapper.find("form").exists()).toBe(true);
   });
+
+  test("should ", () => {
+    console.log(wrapper.debug());
+  });
 });

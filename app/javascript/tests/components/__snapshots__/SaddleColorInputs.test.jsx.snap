@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the <SaddleColorInputs/> component should render the component correctly 1`] = `
+<Fragment>
+  <p
+    className="text-muted text-center mb-0"
+  >
+    Saddle color
+  </p>
+  <ul
+    className="block-list-center customizations-list text-center animate__animated animate__fadeIn"
+    id="custom-associations"
+  >
+    <li
+      id="saddle-colors"
+      key="191"
+      style={
+        Object {
+          "border": "2px solid rgb(255, 255, 0)",
+          "display": "inline-block",
+          "marginRight": "10px",
+        }
+      }
+    >
+      <label
+        className="mb-0 mr-2"
+        htmlFor={191}
+      >
+        Yellow
+      </label>
+      <input
+        data-id={191}
+        key="191"
+        name="saddleColor"
+        onClick={[Function]}
+        type="radio"
+        value={191}
+      />
+    </li>
+    <li
+      id="saddle-colors"
+      key="193"
+      style={
+        Object {
+          "border": "2px solid rgb(0, 0, 0)",
+          "display": "inline-block",
+          "marginRight": "10px",
+        }
+      }
+    >
+      <label
+        className="mb-0 mr-2"
+        htmlFor={193}
+      >
+        Black
+      </label>
+      <input
+        data-id={193}
+        key="193"
+        name="saddleColor"
+        onClick={[Function]}
+        type="radio"
+        value={193}
+      />
+    </li>
+  </ul>
+</Fragment>
+`;

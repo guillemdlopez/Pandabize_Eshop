@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the <RimColorInputs /> component should render it correctly 1`] = `
+<Fragment>
+  <p
+    className="text-muted text-center mb-0"
+  >
+    Rim Color
+  </p>
+  <ul
+    className="block-list-center customizations-list text-center animate__animated animate__fadeIn"
+    id="custom-associations"
+  >
+    <li
+      id="rim-colors"
+      key="175"
+      style={
+        Object {
+          "border": "2px solid rgb(173, 216, 230)",
+          "display": "inline-block",
+          "marginRight": "10px",
+        }
+      }
+    >
+      <label
+        className="mb-0 mr-2"
+        htmlFor={175}
+      >
+        Lightblue
+      </label>
+      <input
+        data-id={175}
+        key="175"
+        name="rimColor"
+        onClick={[Function]}
+        type="radio"
+        value={175}
+      />
+    </li>
+    <li
+      id="rim-colors"
+      key="176"
+      style={
+        Object {
+          "border": "2px solid rgb(255, 165, 0)",
+          "display": "inline-block",
+          "marginRight": "10px",
+        }
+      }
+    >
+      <label
+        className="mb-0 mr-2"
+        htmlFor={176}
+      >
+        Orange
+      </label>
+      <input
+        data-id={176}
+        key="176"
+        name="rimColor"
+        onClick={[Function]}
+        type="radio"
+        value={176}
+      />
+    </li>
+    <li
+      id="rim-colors"
+      key="177"
+      style={
+        Object {
+          "border": "2px solid rgb(128, 0, 128)",
+          "display": "inline-block",
+          "marginRight": "10px",
+        }
+      }
+    >
+      <label
+        className="mb-0 mr-2"
+        htmlFor={177}
+      >
+        Purple
+      </label>
+      <input
+        data-id={177}
+        key="177"
+        name="rimColor"
+        onClick={[Function]}
+        type="radio"
+        value={177}
+      />
+    </li>
+  </ul>
+</Fragment>
+`;

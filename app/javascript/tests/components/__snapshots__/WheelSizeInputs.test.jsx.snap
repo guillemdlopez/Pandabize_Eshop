@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the <WheelSizeInputs/> component should render it correctly 1`] = `
+<ul
+  className="block-list-center"
+>
+  <li
+    id="wheel-sizes"
+    key="146"
+  >
+    <label
+      htmlFor="Wheel size"
+    >
+      Wheel size
+      : 
+      <strong>
+        15 inches
+      </strong>
+    </label>
+    <br />
+    <input
+      className="ml-2"
+      name="wheelSize"
+      onClick={[Function]}
+      type="radio"
+      value={146}
+    />
+  </li>
+  <li
+    id="wheel-sizes"
+    key="148"
+  >
+    <label
+      htmlFor="Wheel size"
+    >
+      Wheel size
+      : 
+      <strong>
+        16 inches
+      </strong>
+    </label>
+    <br />
+    <input
+      className="ml-2"
+      name="wheelSize"
+      onClick={[Function]}
+      type="radio"
+      value={148}
+    />
+  </li>
+  <li
+    id="wheel-sizes"
+    key="149"
+  >
+    <label
+      htmlFor="Wheel size"
+    >
+      Wheel size
+      : 
+      <strong>
+        17 inches
+      </strong>
+    </label>
+    <br />
+    <input
+      className="ml-2"
+      name="wheelSize"
+      onClick={[Function]}
+      type="radio"
+      value={149}
+    />
+  </li>
+</ul>
+`;
