@@ -1,3 +1,1 @@
-<% if current_user %>
-    <%= react_component("App", user: current_user.first_name, userId: current_user.id)%>
-<% end %>
+<%= react_component("App", user: current_user.first_name, userId: current_user.id)%>

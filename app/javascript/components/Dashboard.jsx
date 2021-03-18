@@ -22,7 +22,7 @@ const Dashboard = () => {
       const data = await res.json();
       setUserInfo(data);
     } catch (err) {
-      console.error(err);
+      setUserInfo(err);
     }
   };
   useMemo(() => getUserInfo(), [userId]);

@@ -7,7 +7,6 @@
             <% if policy(Bicycle).new?  %>
                 <li><%= link_to 'Upload Bicycles', new_bicycle_path %></li>
             <% end %>
-
             <% if policy(Customization).new? %>
                 <li><%= link_to 'Add customizations', new_customization_path %></li>
             <% end %>

@@ -22,7 +22,7 @@ const BicycleShow = () => {
 
       setBicycle(data);
     } catch (error) {
-      // console.error(error);
+      setBicycle(error);
     }
   };
 

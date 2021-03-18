@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { mount } from "enzyme";
 import BicycleShow from "../../components/BicycleShow";
 import {
@@ -12,11 +12,6 @@ jest.mock("react-router-dom", () => ({
   useParams: () => ({ bicycleId: 26 }),
 }));
 
-jest.mock("react", () => ({
-  ...jest.requireActual("react"),
-  useMemo: () => `http://localhost:3000/api/v1/bicycles/26`,
-}));
-
 describe("Testing the <BicycleShow /> component", () => {
   const { bicycleId } = useParams();
 
@@ -27,6 +22,7 @@ describe("Testing the <BicycleShow /> component", () => {
       </Route>
     </MemoryRouter>
   );
+
   test("should render the component correctly", () => {
     expect(wrapper).toMatchSnapshot();
   });

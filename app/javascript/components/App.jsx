@@ -7,6 +7,7 @@ import { userContext } from "../context/userContext";
 import AppRouter from "./AppRouter";
 
 const App = ({ user, userId }) => {
+  console.log(user, userId);
   return (
     <userContext.Provider value={{ user, userId }}>
       <AppRouter />

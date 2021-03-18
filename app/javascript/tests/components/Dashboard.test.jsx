@@ -3,11 +3,6 @@ import React from "react";
 import Dashboard from "../../components/Dashboard";
 import { userContext } from "../../context/userContext";
 
-jest.mock("react", () => ({
-  ...jest.requireActual("react"),
-  useMemo: jest.fn(),
-}));
-
 describe("Testing the <Dashboard/> component", () => {
   test("should render the component correctly", () => {
     const wrapper = mount(

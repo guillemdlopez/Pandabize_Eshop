@@ -5,18 +5,15 @@
         <div class="new-bicycle-form">
             <%= simple_form_for(@bicycle) do |f|%>
                 <div class="form-group w-100">
-                    <%= f.label :name %>
-                    <%= f.input :name, label: false, class: 'w-100', placeholder: 'Turbo 3000'  %>
+                    <%= f.input :name, class: 'w-100', placeholder: 'Turbo 3000'  %>
                 </div>
 
                 <div class="form-group">
-                    <%= f.label :description %>
-                    <%= f.input :description, label: false, placeholder: 'Turbo 3000 is the best bicycle in the world.'  %>
+                    <%= f.input :description, placeholder: 'Turbo 3000 is the best bicycle in the world.'  %>
                 </div>
 
                 <div class="form-group">
-                    <%= f.label :photo %>
-                    <%= f.input :photo, as: :file, label: false  %>
+                    <%= f.input :photo, as: :file %>
                 </div>
                 <%= f.submit 'Add', class: 'btn btn-primary w-100' %>
             <% end %>

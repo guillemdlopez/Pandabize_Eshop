@@ -5,7 +5,7 @@ const useFetch = (url) => {
 
   const [state, setState] = useState({
     data: null,
-    loading: false,
+    loading: true,
     error: null,
   });
 
@@ -38,7 +38,7 @@ const useFetch = (url) => {
         setState({
           data: null,
           loading: false,
-          error: `${err}`,
+          error: err,
         });
       });
   }, [url]);

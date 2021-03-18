@@ -1,7 +1,7 @@
 class BicyclesController < ApplicationController
 
     def new
-        @bicycle = Bicycle.new()
+        @bicycle = Bicycle.new
         authorize @bicycle
     end
 
