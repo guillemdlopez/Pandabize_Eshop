@@ -28,6 +28,7 @@ const Dashboard = () => {
   useMemo(() => getUserInfo(), [userId]);
 
   const currentUser = userInfo?.user;
+  console.log(userInfo);
 
   return (
     <div className="container animate__animated animate__fadeIn">

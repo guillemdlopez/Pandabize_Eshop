@@ -4,9 +4,7 @@ class Api::V1::CustomizationsController < ApplicationController
     def index
         @customizations = policy_scope(Customization)
 
-        render json: {
-            customizations: @customizations
-        }
+        render json: @customizations
     end
 
     def show

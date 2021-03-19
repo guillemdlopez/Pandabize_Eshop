@@ -62,13 +62,15 @@ const BicycleShow = () => {
           )}
 
           <div className="customization d-flex">
-            {wheelSize?.map((size) => {
-              return (
-                <ul className="inline-list mb-4" key={size.id}>
-                  <li className="custom-list-item mr-2">{size.value}</li>
-                </ul>
-              );
-            })}
+            <ul className="inline-list mb-4">
+              {wheelSize?.map((size) => {
+                return (
+                  <li key={size.id} className="custom-list-item mr-2">
+                    {size.value}
+                  </li>
+                );
+              })}
+            </ul>
           </div>
 
           {/* RIM COLOR CUSTOMIZATION */}

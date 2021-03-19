@@ -8,6 +8,7 @@ const Sidebar = ({ avatar, first_name, last_name, orders }) => {
   const goToHomePage = () => {
     history.push("/");
   };
+
   return (
     <div className="sidebar d-flex align-items-center">
       <img src={avatar} className="avatar-md" />

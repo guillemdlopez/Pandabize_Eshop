@@ -5,14 +5,19 @@
 import React from "react";
 import { userContext } from "../context/userContext";
 import AppRouter from "./AppRouter";
+import PropTypes from "prop-types";
 
 const App = ({ user, userId }) => {
-  console.log(user, userId);
   return (
     <userContext.Provider value={{ user, userId }}>
       <AppRouter />
     </userContext.Provider>
   );
+};
+
+App.propTypes = {
+  user: PropTypes.string.isRequired,
+  userId: PropTypes.number.isRequired,
 };
 
 export default App;

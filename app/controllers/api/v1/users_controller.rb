@@ -1,7 +1,8 @@
 class Api::V1::UsersController < ApplicationController
     before_action :find_user, only: [:show]
+
     def index
-        @users = policy_scope(User.all).with_attached_avatar
+        @users = policy_scope(User).with_attached_avatar
 
         render json: @users.map {|user| user.as_json.merge({avatar: user.avatar.service_url, orders: user.orders})}
     end

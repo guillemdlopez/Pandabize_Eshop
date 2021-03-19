@@ -179,12 +179,10 @@ const BicycleForm = () => {
         </div>
         <div className="col-lg-5 col-md-12 order-form">
           <h2 className="mb-0">{name}</h2>
-          {displayError ? (
+          {displayError && (
             <div className="customized-error animate__animated animate__fadeIn">
               {errorMsgContent}
             </div>
-          ) : (
-            ""
           )}
           <form onSubmit={handleSubmit}>
             <WheelSizeInputs
@@ -257,22 +255,12 @@ const BicycleForm = () => {
             Go back
           </button>
         </div>
-        {displaySuccess ? (
+        {displaySuccess && (
           <div className="overlay animate__animated animate__fadeIn"></div>
-        ) : (
-          ""
         )}
-        {displaySuccess ? (
-          <ModalOrder
-            content={successMsgContent}
-            {...bicycle}
-            price={price}
-            setSuccessMsg={setSuccessMsg}
-            successMsg={successMsg}
-            displaySuccess={displaySuccess}
-          />
-        ) : (
-          ""
+
+        {displaySuccess && (
+          <ModalOrder content={successMsgContent} {...bicycle} price={price} />
         )}
       </div>
     </div>

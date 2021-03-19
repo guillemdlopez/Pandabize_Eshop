@@ -13,6 +13,9 @@ export const showHiddeDropdown = function () {
 
   document.addEventListener("click", (e) => {
     if (e.target === avatar) return;
-    dropdown.classList.add("no-visible");
+
+    if (!dropdown.classList.contains("no-visible")) {
+      dropdown.classList.add("no-visible");
+    }
   });
 };

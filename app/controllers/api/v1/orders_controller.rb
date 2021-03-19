@@ -2,7 +2,7 @@ class Api::V1::OrdersController < ApplicationController
     before_action :find_order, only: [:show]
 
     def index
-        @orders = policy_scope(Order.all)
+        @orders = policy_scope(Order)
 
         render json: @orders
     end
